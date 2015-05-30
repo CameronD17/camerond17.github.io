@@ -28,3 +28,27 @@ $(function() {
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+$('.read-more').click(function() {
+    if($(this).find($(".fa")).hasClass('fa-toggle-down'))
+	{
+		//$(this).text($(this).text().replace('more', 'less'));
+		$(this).find($('span')).text($(this).text().replace('more', 'less'));
+		$(this).find($(".fa")).removeClass('fa-toggle-down').addClass('fa-toggle-up');	
+	}
+	else
+	{	
+		$(this).find($('span')).text($(this).text().replace('less', 'more'));
+		$(this).find($(".fa")).removeClass('fa-toggle-up').addClass('fa-toggle-down');
+	}
+	
+	/*
+	if ($(this).text() == "Read more")
+	{
+		$(this).text("Read less");
+	}
+	else
+	{
+		$(this).text("Read more");
+	}*/
+});
