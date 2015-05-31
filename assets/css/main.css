@@ -274,6 +274,10 @@ a:focus {
 	padding: 15px;
 }
 
+.abbr {
+	border-bottom:1px dotted #FFFFFF;
+}
+
 ul.banner-social-buttons {
     margin-top: 0;
 }
