@@ -212,8 +212,11 @@ a:focus {
 	border-right: 2px solid rgba(255,255,255,0.5);
 }
 
-.experience-section p {	
-    line-height: 1.2;
+.experience-section p,
+.experience-section h4 {	
+	color: rgba(255,255,255,0.9);
+	font-size: 18px;
+    line-height: 1.5;
 }
 
 .skills-tab-collection {
