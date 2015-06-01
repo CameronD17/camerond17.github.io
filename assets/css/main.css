@@ -26,7 +26,7 @@ h6 {
     margin: 0 0 35px;
 	text-align: center;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Noto Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -94,7 +94,7 @@ a:focus {
     margin-bottom: 0;
     border-bottom: 2px solid rgba(255,255,255,.3);
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Noto Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: #1380BC;
 }
 
@@ -111,12 +111,6 @@ a:focus {
 .navbar-custom .navbar-brand:hover {
 	color: #FFFFFF;
     text-decoration: none; 
-}
-
-.navbar-custom .navbar-brand:focus,
-.navbar-custom .navbar-brand .navbar-toggle:focus,
-.navbar-custom .navbar-brand .navbar-toggle:active {
-    outline: 0;
 }
 
 .navbar-custom a {
@@ -166,8 +160,7 @@ a:focus {
     display: table;
     width: 100%;
     height: auto;
-    padding: 100px 0 50px 0;
-    text-align: center;
+    padding: 100px 0 0 0;
     color: #FFFFFF;
     background: url(../img/intro.jpg) no-repeat bottom center scroll;
     background-color: #004870;
@@ -188,11 +181,11 @@ a:focus {
 }
 
 .intro .intro-body .intro-heading {
-    font-size: 40px;
+    font-size: 50px;
 }
 
 .intro .intro-body .intro-text {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 @media(min-width:768px) {
@@ -200,36 +193,6 @@ a:focus {
         height: 100%;
         padding: 0;
     }
-
-    .intro .intro-body .brand-heading {
-        font-size: 60px;
-    }
-
-    .intro .intro-body .intro-text {
-        font-size: 20px;
-    }
-}
-
-.btn-circle {
-    width: 70px;
-    height: 70px;
-    margin-top: 15px;
-    padding: 7px 16px;
-    border: 2px solid #FFFFFF;
-    border-radius: 100%!important;
-    font-size: 40px;
-    color: #FFFFFF;
-    background: 0 0;
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
-}
-
-.btn-circle:hover,
-.btn-circle:focus {
-	color: #FFFFFF;
-    outline: 0;	
-    background: rgba(255,255,255,.1);
 }
 
 .content-section {
@@ -253,7 +216,7 @@ a:focus {
 	border: 0;
 	font-size: 15px;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Noto Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 500;
     letter-spacing: 1px;
 }
