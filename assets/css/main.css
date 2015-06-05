@@ -113,9 +113,6 @@ a:focus {
     text-decoration: none; 
 }
 
-.navbar-custom a {
-    color: #004870;
-}
 
 .navbar-custom .nav li a {
 	font-size: 15px;
@@ -138,7 +135,7 @@ a:focus {
 }
 
 
-@media(min-width:768px) {
+@media(min-width:768px) and (min-height:700px) {
     .navbar-custom {
         padding: 20px 0;
         border-bottom: 0;
@@ -148,6 +145,10 @@ a:focus {
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
     }
+
+	.navbar-custom a {
+	color: #004870;
+	}
 
     .navbar-custom.top-nav-collapse {
         padding: 0;
@@ -183,13 +184,20 @@ a:focus {
     display: table-cell;
     vertical-align: middle;
 }
+/*
+.intro .intro-body .intro-bg {
+	border-radius: 25px;
+	padding-top: 20px;
+	background-color: rgba(0,72,112,0.7);
+}*/
 
 .intro .intro-body .intro-heading {
     font-size: 50px;
+	font-weight: bold;
 }
 
 .intro .intro-body .intro-text {
-    font-size: 20px;
+    font-size: 20px;	
 }
 
 @media(min-width:768px) {
