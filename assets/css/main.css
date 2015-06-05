@@ -113,6 +113,10 @@ a:focus {
     text-decoration: none; 
 }
 
+.navbar-custom a {
+	color: rgba(255,255,255,0.8);
+}
+
 
 .navbar-custom .nav li a {
 	font-size: 15px;
@@ -184,6 +188,7 @@ a:focus {
     display: table-cell;
     vertical-align: middle;
 }
+
 /*
 .intro .intro-body .intro-bg {
 	border-radius: 25px;
