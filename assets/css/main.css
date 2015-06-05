@@ -114,7 +114,7 @@ a:focus {
 }
 
 .navbar-custom a {
-    color: rgba(255,255,255,.8);
+    color: #004870;
 }
 
 .navbar-custom .nav li a {
@@ -154,6 +154,10 @@ a:focus {
         border-bottom: 1px solid rgba(255,255,255,.3);
         background: #1380BC;
     }
+	
+	.navbar-custom.top-nav-collapse a{	
+		color: rgba(255,255,255,0.8);
+	}
 }
 
 .intro {
