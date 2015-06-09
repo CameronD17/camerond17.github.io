@@ -17,6 +17,11 @@ html {
     height: 100%;
 }
 
+img {
+    max-height: 180px;
+}
+	
+
 h1,
 h2,
 h3,
@@ -189,13 +194,6 @@ a:focus {
     vertical-align: middle;
 }
 
-/*
-.intro .intro-body .intro-bg {
-	border-radius: 25px;
-	padding-top: 20px;
-	background-color: rgba(0,72,112,0.7);
-}*/
-
 .intro .intro-body .intro-heading {
     font-size: 50px;
 	font-weight: bold;
@@ -236,6 +234,14 @@ a:focus {
     line-height: 1.5;
 }
 
+.experience-divider{
+	float:left;
+	width:100%;
+	height:2px;
+	background-color:rgba(255,255,255,0.5);
+	margin: 20px 0;
+}
+
 .skills-tab-collection {
 	border: 0;
 	font-size: 15px;
@@ -248,6 +254,14 @@ a:focus {
 .skills-tab-collection li a:hover{
 	color: #000000;
 	background: transparent;
+}
+
+.skills-list-heading {
+	margin: 0 0 10px 20px;
+	text-align: left;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .nav-pills > li.active > a,
@@ -313,6 +327,8 @@ footer {
 	text-align: right;
 	margin: 5px 0;
 }
+
+.fa { display:inline; }
 
 ::-moz-selection {
     text-shadow: none;
