@@ -17,8 +17,10 @@ html {
     height: 100%;
 }
 
-img {
+.img-circle {
     max-height: 180px;
+	margin: 20px 0;
+	display: none;
 }
 	
 
@@ -143,6 +145,11 @@ a:focus {
     background-color: rgba(255,255,255,.3);
 }
 
+@media(min-width:1200px) {
+	.img-circle {
+		display: inline;
+	}
+}
 
 @media(min-width:768px) and (min-height:700px) {
     .navbar-custom {
@@ -328,7 +335,14 @@ footer {
 	margin: 5px 0;
 }
 
-.fa { display:inline; }
+.fa { 
+	display:inline; 
+}
+
+.fa-external-link-square {
+	vertical-align: super;
+	font-size: 80%;
+}
 
 ::-moz-selection {
     text-shadow: none;
