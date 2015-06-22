@@ -29,26 +29,18 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
+// Toggle the 'Read more' and 'Read less' links.
 $('.read-more').click(function() {
-    if($(this).find($(".fa")).hasClass('fa-toggle-down'))
-	{
-		//$(this).text($(this).text().replace('more', 'less'));
-		$(this).find($('span')).text($(this).text().replace('more', 'less'));
-		$(this).find($(".fa")).removeClass('fa-toggle-down').addClass('fa-toggle-up');	
+	if ($(this).attr("aria-expanded") == "false")
+	{		
+		$(this).find($(".fa")).removeClass('fa-toggle-down').addClass('fa-toggle-up');	// Switch the font-awesome up/down arrow
+		$(this).find($('span')).text($(this).text().replace('more','less'));			// Change text from 'more' to 'less'
+		$(this).find($('span')).text().trim();											// Trim trailing whitespace
 	}
-	else
+	else if($(this).attr("aria-expanded") == "true")
 	{	
-		$(this).find($('span')).text($(this).text().replace('less', 'more'));
 		$(this).find($(".fa")).removeClass('fa-toggle-up').addClass('fa-toggle-down');
+		$(this).find($('span')).text($(this).text().replace('less','more'));		
+		$(this).find($('span')).text().trim();
 	}
-	
-	/*
-	if ($(this).text() == "Read more")
-	{
-		$(this).text("Read less");
-	}
-	else
-	{
-		$(this).text("Read more");
-	}*/
 });
