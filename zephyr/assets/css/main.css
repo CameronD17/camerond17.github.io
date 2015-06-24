@@ -1,5 +1,4 @@
 /*!
- * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
@@ -7,7 +6,7 @@
 body {
     width: 100%;
     height: 100%;
-    font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Lora","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #fff;
     background-color: #000;
 }
@@ -31,23 +30,15 @@ h5,
 h6 {
     margin: 0 0 35px;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Asap","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
 }
 
 p {
-    margin: 0 0 25px;
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-@media(min-width:768px) {
-    p {
-        margin: 0 0 35px;
-        font-size: 20px;
-        line-height: 1.6;
-    }
+	margin: 0 0 35px;
+	font-size: 20px;
+	line-height: 1.6;
 }
 
 a {
@@ -75,13 +66,35 @@ a:focus {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Rock Salt","Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: #000;
+	width: 100%;
+}
+
+.navbar-toggle {
+	z-index: 1;
+}
+
+.navbar-header {
+	position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: auto;
 }
 
 .navbar-custom .navbar-brand {
     font-weight: 700;
+	float:none;
+    font-size: 60px;
 	text-align: center;
+	margin-top: 20%;
+}
+
+.navbar-brand.top-nav-collapse{		
+	margin: 0;	
+	font-size: 20px;
+	z-index: 0;
 }
 
 .navbar-custom .navbar-brand:focus {
@@ -142,7 +155,7 @@ a:focus {
 
 @media(min-width:768px) {
     .navbar-custom {
-        padding: 20px 0;
+        padding: 30px 0;
         border-bottom: 0;
         letter-spacing: 1px;
         background: 0 0;
@@ -179,26 +192,10 @@ a:focus {
 	padding-bottom: 5%;
 }
 
-.intro .intro-body .brand-heading {
-    font-size: 40px;
-}
-
-.intro .intro-body .intro-text {
-    font-size: 18px;
-}
-
 @media(min-width:768px) {
     .intro {
         height: 100%;
         padding: 0;
-    }
-
-    .intro .intro-body .brand-heading {
-        font-size: 100px;
-    }
-
-    .intro .intro-body .intro-text {
-        font-size: 26px;
     }
 }
 
@@ -316,67 +313,6 @@ a:focus {
     -o-background-size: cover;
 }
 
-@media(min-width:767px) {
-    .content-section {
-        padding-top: 250px;
-    }
-
-    .download-section {
-        padding: 100px 0;
-    }
-
-    #map {
-        height: 400px;
-        margin-top: 250px;
-    }
-}
-
-.btn {
-    border-radius: 0;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 400;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-}
-
-.btn-default {
-    border: 1px solid #42dca3;
-    color: #42dca3;
-    background-color: transparent;
-}
-
-.btn-default:hover,
-.btn-default:focus {
-    border: 1px solid #42dca3;
-    outline: 0;
-    color: #000;
-    background-color: #42dca3;
-}
-
-ul.banner-social-buttons {
-    margin-top: 0;
-}
-
-.banner-social-buttons li{
-	font-size: 50px;
-	margin: 0 20px;
-}
-
-@media(max-width:767px) {
-    ul.banner-social-buttons li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-		text-align: center;
-    }
-
-    ul.banner-social-buttons li:last-child {
-        margin-bottom: 0;
-    }
-}
-
 footer {	
     color: rgba(255,255,255,.3);
     padding: 50px 0 50px 0;
@@ -398,7 +334,8 @@ footer {
 	width: 50%;
 }
 
-.right-footer p, .right-footer a {
+.right-footer p, 
+.right-footer a {
 	font-size: 15px;
 	text-align: right;
 	margin: 5px 0;

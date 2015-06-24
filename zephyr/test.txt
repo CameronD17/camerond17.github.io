@@ -1,0 +1,42 @@
+<!-- Elle -->
+					<div class="col-lg-12 row">
+						<div class="col-lg-4">
+							<img src="https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/1606982_10205146677371669_5772464999357074788_n.jpg?oh=72410a96aeddb38e6470778f889fee96&oe=55EABF69" class="img-circle" />					
+						</div>
+						<div class="col-lg-8">
+							<p class="artist-right"><span class="artist">Elle Armstrong<br/><span class="subtitle">Vocals</span></span></p>
+						</div>
+					</div>		
+					
+					<!-- Luke -->		
+					<div class="artist-divider"></div>						
+					<div class="col-lg-12 row">
+						<div class="col-lg-8">
+							<p class="artist-left"><span class="artist">Luke Warwick-Soden<br/><span class="subtitle">Guitar</span></span></p>	
+						</div>
+						<div class="col-lg-4">
+							<img src="https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/10431441_10206202062671905_2517089833936930683_n.jpg?oh=0c8d966228090d08d5517ade0688f5b1&oe=562A7F33" class="img-circle" />					
+						</div>
+					</div>
+					
+					<!-- Jem -->
+					<div class="artist-divider"></div>								
+					<div class="col-lg-12">
+						<div class="col-lg-3">
+							<img src="https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xfp1/t31.0-8/p960x960/10862434_10152408957176403_7719501210927658025_o.jpg" class="img-circle" />					
+						</div>
+						<div class="col-lg-9 artist-about">
+							<p class="artist-right"><span class="artist">Jem Caisley<br/><span class="subtitle">Bass</span></span></p>	
+						</div>
+					</div>
+					
+					<!-- Tom -->
+					<div class="artist-divider"></div>			
+					<div class="col-lg-12">
+						<div class="col-lg-9 artist-about">
+							<p class="artist-left"><span class="artist">Tom Johnson<br/><span class="subtitle">Drums</span></span></p>	
+						</div>
+						<div class="col-lg-3">
+							<img src="https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/10881819_10205325024063350_4079156209079909263_n.jpg?oh=19d85321c21cf2cbca9213d2398d3e21&oe=56298BD8" class="img-circle" />					
+						</div>
+					</div>
