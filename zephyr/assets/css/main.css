@@ -112,6 +112,10 @@ a:focus {
     outline: 0;
 }
 
+.navbar-right {
+	font-size: 20px;
+}
+
 .navbar-custom a {
     color: #fff;
 }
