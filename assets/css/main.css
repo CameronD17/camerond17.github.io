@@ -286,6 +286,25 @@ a:focus {
 	border-bottom:1px dotted #FFFFFF;
 }
 
+.about-img {
+	max-height: 200px;
+}
+
+.about-icons p{
+	display: none;
+    text-align: center;
+}
+
+@media(min-width:1200px) {
+	.about-icons p{
+		display: inline;
+	}
+}
+
+.about-subtitle {
+	font-weight: bold;
+}
+
 ul.banner-social-buttons {
     margin-top: 0;
 }
@@ -293,6 +312,12 @@ ul.banner-social-buttons {
 .banner-social-buttons li{
 	font-size: 50px;
 	margin-bottom: 0;
+}
+
+.social-circle {
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
 }
 
 @media(max-width:767px) {
