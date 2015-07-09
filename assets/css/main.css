@@ -45,7 +45,7 @@ p{
     line-height: 1.5;
 }
 
-li {
+li, td {
 	font-size: 20px;
 }
 
@@ -66,6 +66,11 @@ a:focus {
 	text-align: center;
 }
 
+.table th, .table td { 
+    border-top: none !important;
+	padding: 2px !important;
+}
+
 .inverted {
 	background-color: #D3D3D3;
 }
@@ -80,7 +85,8 @@ a:focus {
 }
 
 .inverted p,
-.inverted li {	
+.inverted li, 
+.inverted td{	
 	color: rgba(000,000,000,0.9);
 }
 
