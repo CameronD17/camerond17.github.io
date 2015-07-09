@@ -45,7 +45,7 @@ p{
     line-height: 1.5;
 }
 
-li, td {
+li, td, th {
 	font-size: 20px;
 }
 
@@ -66,7 +66,11 @@ a:focus {
 	text-align: center;
 }
 
-.table th, .table td { 
+.table th {
+	border-bottom: 2px solid rgba(000,000,000,.3) !important;
+}
+
+.table td , .table th{ 
     border-top: none !important;
 	padding: 2px !important;
 }
@@ -86,7 +90,8 @@ a:focus {
 
 .inverted p,
 .inverted li, 
-.inverted td{	
+.inverted td,
+.inverted th{	
 	color: rgba(000,000,000,0.9);
 }
 
@@ -270,8 +275,8 @@ a:focus {
 }
 
 .skills-list-heading {
-	margin: 0 0 10px 20px;
-	text-align: left;
+	margin: 0 0 10px 0px;
+	text-align: center;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
