@@ -45,7 +45,9 @@ p{
     line-height: 1.5;
 }
 
-li, td, th {
+li,
+td,
+th {
 	font-size: 20px;
 }
 
@@ -156,12 +158,6 @@ a:focus {
     background-color: rgba(255,255,255,.3);
 }
 
-@media(min-width:1200px) {
-	.img-circle {
-		display: inline;
-	}
-}
-
 @media(min-width:768px) and (min-height:700px) {
     .navbar-custom {
         padding: 20px 0;
@@ -174,7 +170,7 @@ a:focus {
     }
 
 	.navbar-custom a {
-	color: #004870;
+		color: #004870;
 	}
 
     .navbar-custom.top-nav-collapse {
@@ -214,7 +210,9 @@ a:focus {
 
 .intro .intro-body .intro-heading {
     font-size: 50px;
-	font-weight: bold;
+	font-weight: bold;	
+    font-family: 'Rock Salt',cursive;
+	text-transform: none;
 }
 
 .intro .intro-body .intro-text {
@@ -308,31 +306,22 @@ a:focus {
 }
 
 @media(min-width:1200px) {
+	.img-circle {
+		display: inline;
+	}
+
 	.about-icons p{
 		display: inline;
 	}
 }
 
-.about-subtitle {
-	font-weight: bold;
-}
-
-ul.banner-social-buttons {
-    margin-top: 0;
-}
-
-.banner-social-buttons li{
-	font-size: 50px;
-	margin-bottom: 0;
-}
-
-.social-circle {
+.social-icon {
     width: 80px;
     height: 80px;
     font-size: 50px;
 }
 
-@media(max-width:767px) {
+@media(max-width:768px) {
     ul.banner-social-buttons li {
         display: block;
         margin-bottom: 20px;
