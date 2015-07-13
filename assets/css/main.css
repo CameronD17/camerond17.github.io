@@ -299,11 +299,19 @@ a:focus {
 	max-height: 200px;
 }
 
+.about-subtitle {
+	font-weight: bold;
+}
+
 .about-icons p{
 	width: 100%;	
 	display: none;
     text-align: center;
 }
+
+.about-table td{
+	height: 50px;
+}		
 
 @media(min-width:1200px) {
 	.img-circle {
