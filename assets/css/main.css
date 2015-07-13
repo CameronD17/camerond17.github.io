@@ -210,7 +210,7 @@ a:focus {
 
 .intro .intro-body .intro-heading {
     font-size: 50px;
-	font-weight: bold;	
+	font-weight: 100;	
     font-family: 'Rock Salt',cursive;
 	text-transform: none;
 }
