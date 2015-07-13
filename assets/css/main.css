@@ -291,6 +291,12 @@ a:focus {
 	padding: 15px;
 }
 
+@media(max-width:500px) {
+    .skills-experience {
+        display: none;
+    }
+}
+
 .abbr {
 	border-bottom:1px dotted #FFFFFF;
 }
