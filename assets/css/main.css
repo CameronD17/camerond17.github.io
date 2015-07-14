@@ -281,6 +281,9 @@ a:focus {
     letter-spacing: 1px;
 }
 
+.skills-content {
+	padding: 15px;
+}
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
@@ -288,14 +291,14 @@ a:focus {
   background-color: #004870;
 }
 
-.skills-content {
-	padding: 15px;
-}
-
 @media(max-width:500px) {
     .skills-experience {
         display: none;
     }
+	
+	.skills-rating {
+		text-align: right;
+	}
 }
 
 .abbr {
