@@ -120,6 +120,10 @@ a:focus {
 	width: 100%;
 }
 
+.navbar-custom .navbar-brand {
+	z-index: 0;
+}
+
 .navbar-toggle {
 	z-index: 1;
 }
@@ -131,14 +135,6 @@ a:focus {
     text-align: center;
     margin: auto;
 }
-
-
-.navbar-custom .navbar-brand .navbar-toggle {
-    padding: 4px 6px;
-    font-size: 16px;
-    color: #FFFFFF;
-}
-
 .navbar-custom .navbar-brand:hover {
 	color: #FFFFFF;
     text-decoration: none; 
@@ -147,7 +143,6 @@ a:focus {
 .navbar-custom a {
 	color: rgba(255,255,255,0.8);
 }
-
 
 .navbar-custom .nav li a {
 	font-size: 15px;
@@ -190,7 +185,7 @@ a:focus {
 		z-index: 0;
 	}
 
-	.navbar-brand.top-nav-collapse{		
+	.navbar-custom .navbar-brand.top-nav-collapse{		
 		margin: 0;	
 		font-size: 20px;
 	}
