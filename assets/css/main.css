@@ -1,7 +1,7 @@
-/*!
- * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
- * Modified by Cameron Doyle 2015
+/*
+ * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com) 
  * Code licensed under the Apache License v2.0.
+ * Modified by Cameron Doyle 2015
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
@@ -117,11 +117,21 @@ a:focus {
     text-transform: uppercase;
     font-family: 'Noto Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: #1380BC;
+	width: 100%;
 }
 
-.navbar-custom .navbar-brand {
-    font-weight: 700;
+.navbar-toggle {
+	z-index: 1;
 }
+
+.navbar-header {
+	position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: auto;
+}
+
 
 .navbar-custom .navbar-brand .navbar-toggle {
     padding: 4px 6px;
@@ -159,7 +169,7 @@ a:focus {
     background-color: rgba(255,255,255,.3);
 }
 
-@media(min-width:768px) and (min-height:700px) {
+@media(min-width:768px) {
     .navbar-custom {
         padding: 20px 0;
         border-bottom: 0;
@@ -169,9 +179,19 @@ a:focus {
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
     }
+		
+	.navbar-custom .navbar-brand {
+		font-weight: 700;
+		float: none;
+		font-size: 60px;
+		color: #FFFFFF;
+		text-align: center;
+		margin-top: 15%;
+	}
 
-	.navbar-custom a {
-		color: #004870;
+	.navbar-brand.top-nav-collapse{		
+		margin: 0;	
+		font-size: 20px;
 	}
 
     .navbar-custom.top-nav-collapse {
@@ -179,17 +199,13 @@ a:focus {
         border-bottom: 1px solid rgba(255,255,255,.3);
         background: #1380BC;
     }
-	
-	.navbar-custom.top-nav-collapse a{	
-		color: rgba(255,255,255,0.8);
-	}
 }
 
 .intro {
     display: table;
     width: 100%;
     height: auto;
-    padding: 100px 0 0 0;
+    padding: 200px 0 0 0;
     color: #FFFFFF;
     background: url(../img/intro-sm.jpg) no-repeat bottom center scroll;
     background-color: #004870;
@@ -207,6 +223,7 @@ a:focus {
 .intro .intro-body {
     display: table-cell;
     vertical-align: middle;
+	padding-top: 100px;
 }
 
 .intro .intro-body .intro-heading {
