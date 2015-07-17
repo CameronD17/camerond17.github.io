@@ -48,55 +48,23 @@ $('.read-more').click(function() {
 
 // Toggle skills on/off  (C) Cameron Doyle
 $('.skill-toggle').click(function() {
-	if($(this).attr('id') == "proficient")
+	
+	var level = $(this).attr('id');	
+	
+	if($(this).attr("isselected") == "true")
 	{
-		if($(this).attr("isselected") == "true")
-		{
-			$(this).attr("isselected", "false");
-			$('.proficient').each(function() {				
-				$(this).addClass("hidden");
-			});
-		}
-		else if($(this).attr("isselected") == "false")
-		{
-			$(this).attr("isselected", "true");
-			$('.proficient').each(function() {
-				$(this).removeClass("hidden");
-			});
-		}
+		$(this).attr("isselected", "false");
+		$(this).find($(".fa")).removeClass('fa-check-square-o').addClass('fa-square-o');
+		$('.'+level).each(function() {				
+			$(this).addClass("hidden");
+		});
 	}
-	else if($(this).attr('id') == "familiar")
+	else if($(this).attr("isselected") == "false")
 	{
-		if($(this).attr("isselected") == "true")
-		{
-			$(this).attr("isselected", "false");
-			$('.familiar').each(function() {				
-				$(this).addClass("hidden");
-			});
-		}
-		else if($(this).attr("isselected") == "false")
-		{
-			$(this).attr("isselected", "true");
-			$('.familiar').each(function() {
-				$(this).removeClass("hidden");
-			});
-		}
-	}
-	else if($(this).attr('id') == "beginner")
-	{
-		if($(this).attr("isselected") == "true")
-		{
-			$(this).attr("isselected", "false");
-			$('.beginner').each(function() {				
-				$(this).addClass("hidden");
-			});
-		}
-		else if($(this).attr("isselected") == "false")
-		{
-			$(this).attr("isselected", "true");
-			$('.beginner').each(function() {
-				$(this).removeClass("hidden");
-			});
-		}
+		$(this).attr("isselected", "true");			
+		$(this).find($(".fa")).removeClass('fa-square-o').addClass('fa-check-square-o');
+		$('.'+level).each(function() {
+			$(this).removeClass("hidden");
+		});
 	}
 });

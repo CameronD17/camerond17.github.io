@@ -308,12 +308,11 @@ a:focus {
 	text-align: center;
 }
 
-.more-skills-toggles a:active{		
-    text-transform: uppercase;
-}
-
 .skills-rating .hidden {
 	display: none;
+	-webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+	-moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+	transition: background .5s ease-in-out,padding .5s ease-in-out;
 }
 
 .nav-pills > li.active > a,
