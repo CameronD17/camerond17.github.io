@@ -303,11 +303,24 @@ a:focus {
 .skills-content {
 	padding: 15px;
 }
+
+.more-skills-toggles {	
+	text-align: center;
+}
+
+.more-skills-toggles a:active{		
+    text-transform: uppercase;
+}
+
+.skills-rating .hidden {
+	display: none;
+}
+
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
-  color: #FFFFFF;
-  background-color: #004870;
+	color: #FFFFFF;
+	background-color: #004870;
 }
 
 @media(max-width:500px) {

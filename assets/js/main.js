@@ -30,7 +30,7 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
-// Toggle the 'Read more' and 'Read less' links.
+// Toggle the 'Read more' and 'Read less' links. (C) Cameron Doyle
 $('.read-more').click(function() {
 	if ($(this).attr("aria-expanded") == "false")
 	{		
@@ -43,5 +43,60 @@ $('.read-more').click(function() {
 		$(this).find($(".fa")).removeClass('fa-toggle-up').addClass('fa-toggle-down');
 		$(this).find($('span')).text($(this).text().replace('less','more'));		
 		$(this).find($('span')).text().trim();
+	}
+});
+
+// Toggle skills on/off  (C) Cameron Doyle
+$('.skill-toggle').click(function() {
+	if($(this).attr('id') == "proficient")
+	{
+		if($(this).attr("isselected") == "true")
+		{
+			$(this).attr("isselected", "false");
+			$('.proficient').each(function() {				
+				$(this).addClass("hidden");
+			});
+		}
+		else if($(this).attr("isselected") == "false")
+		{
+			$(this).attr("isselected", "true");
+			$('.proficient').each(function() {
+				$(this).removeClass("hidden");
+			});
+		}
+	}
+	else if($(this).attr('id') == "familiar")
+	{
+		if($(this).attr("isselected") == "true")
+		{
+			$(this).attr("isselected", "false");
+			$('.familiar').each(function() {				
+				$(this).addClass("hidden");
+			});
+		}
+		else if($(this).attr("isselected") == "false")
+		{
+			$(this).attr("isselected", "true");
+			$('.familiar').each(function() {
+				$(this).removeClass("hidden");
+			});
+		}
+	}
+	else if($(this).attr('id') == "beginner")
+	{
+		if($(this).attr("isselected") == "true")
+		{
+			$(this).attr("isselected", "false");
+			$('.beginner').each(function() {				
+				$(this).addClass("hidden");
+			});
+		}
+		else if($(this).attr("isselected") == "false")
+		{
+			$(this).attr("isselected", "true");
+			$('.beginner').each(function() {
+				$(this).removeClass("hidden");
+			});
+		}
 	}
 });
