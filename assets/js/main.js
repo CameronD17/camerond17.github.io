@@ -51,20 +51,20 @@ $('.skill-toggle').click(function() {
 	
 	var level = $(this).attr('id');	
 	
-	if($(this).attr("isselected") == "true")
+	if($(this).hasClass('selected'))
 	{
-		$(this).attr("isselected", "false");
+		$(this).removeClass('selected');
 		$(this).find($(".fa")).removeClass('fa-check-square-o').addClass('fa-square-o');
 		$('.'+level).each(function() {				
-			$(this).addClass("hidden");
+			$(this).addClass('hidden');
 		});
 	}
-	else if($(this).attr("isselected") == "false")
+	else
 	{
-		$(this).attr("isselected", "true");			
+		$(this).addClass('selected');			
 		$(this).find($(".fa")).removeClass('fa-square-o').addClass('fa-check-square-o');
 		$('.'+level).each(function() {
-			$(this).removeClass("hidden");
+			$(this).removeClass('hidden');
 		});
 	}
 });
