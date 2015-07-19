@@ -291,7 +291,7 @@ a:focus {
 }
 
 .about-paragraph {
-	height: 200px;
+	height: 100%;
 	line-height: 200px;
 }
 
