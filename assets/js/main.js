@@ -30,16 +30,14 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
-$('body').bind('click', function(e) {
-    if($(e.target).closest('.navbar').length == 0) {
-        var opened = $('.navbar-collapse').hasClass('collapse in');
-        if ( opened === true ) {
-            $('.navbar-collapse').collapse('hide');
-        }
-    }
+// Closes the Responsive Menu on click-off (C) Cameron Doyle
+$('body').click(function() {
+	if ($('.navbar-collapse').hasClass('collapse in')) {
+		$('.navbar-collapse').collapse('hide');
+	}
 });
 
-// Toggle the 'Read more' and 'Read less' links. (C) Cameron Doyle
+// Toggle the 'Read more' and 'Read less' links (C) Cameron Doyle
 $('.read-more').click(function() {
 	if ($(this).attr("aria-expanded") == "false")
 	{		
@@ -55,7 +53,7 @@ $('.read-more').click(function() {
 	}
 });
 
-// Toggle skills on/off  (C) Cameron Doyle
+// Toggle skills on/off (C) Cameron Doyle
 $('.skill-toggle').click(function() {
 	
 	var level = $(this).attr('id');	
