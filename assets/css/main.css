@@ -122,6 +122,10 @@ a:focus {
 	width: 100%;
 }
 
+.navbar-left {
+	margin-top: 40px
+}
+
 .navbar-custom .navbar-brand {
 	z-index: 0;
 }
@@ -176,6 +180,10 @@ a:focus {
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
     }
+	
+	.navbar-left {
+		margin-top: 0px
+	}
 		
 	.navbar-custom .navbar-brand {
 		font-weight: 700;
