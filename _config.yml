@@ -6,16 +6,25 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: Cameron Doyle
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://camerondoyle.co.uk" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+
+author:
+    firstname: Cameron
+    surname: Doyle
+    fullname: Cameron Doyle
+    email: hello@camerondoyle.co.uk
+    twitter: CameronD17
+    github: CameronD17
+    facebook: cameron.doyle
+    linkedin: camerond17
+    instagram: camerond17
+    stackoverflow: 1669993/camerond17
+    
+description: > # this means to ignore newlines until "baseurl:"
+  Personal portfolio website of Cameron Doyle, a programmer 
+  and software engineer based in Edinburgh, Scotland.
 
 # Build settings
 markdown: kramdown
