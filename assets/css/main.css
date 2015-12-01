@@ -100,7 +100,7 @@ a:focus {
 }
 
 .inverted a {  
-    color: rgba(000,000,000,0.4);
+    color: rgba(000,000,000,0.6);
 }
 
 .inverted a:hover,
@@ -417,7 +417,7 @@ a:focus {
 
 /* Blog */
 
-.list-posts {
+.blog-posts {
     list-style-type: none;
     padding: 0px;
 }
@@ -425,17 +425,37 @@ a:focus {
 .post-teaser {
     margin-bottom: 25px;
     font-weight: 700;
+    width: 100%;
+    text-align: left;
 }
 
-.post-teaser__title {
-    font-size: 22px;
+.post-title {
+    font-size: 22px;  
     color: #000;
+    text-align: left;
 }
 
-.post-teaser__date {
+.post-date {
     font-size: 16px;
-    float: right;
-    vertical-align: middle;
+    vertical-align: middle !important;
+    text-align: right;
+    width: 25%;
+}
+
+.post-subtitle {
+    font-size: 14px;
+    font-style: italic;
+    text-align: left;
+}
+
+.post-divider{
+    float:left;
+    width:100%;
+    height:2px;
+    background-color:rgba(000,000,000,0.4);
+    margin: 20px 0;
+    -webkit-column-span: all;
+    column-span: all;
 }
 
 /* Contact Section & Footer */

@@ -291,36 +291,28 @@ layout: page
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="content-section text-center inverted">
+    <!-- Blog Section -->
+    <section id="blog" class="content-section text-center inverted">
         <div class="container">
             <div class="col-lg-10 col-lg-offset-1">
-                <h1>Contact</h1>
-                <p class="emphasis">
-                    <a href="mailto:cameron@camerondoyle.co.uk"><span itemprop="email">cameron@camerondoyle.co.uk</span></a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://facebook.com/cameron.doyle" target="_blank" class="btn social-icon" title="Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://uk.linkedin.com/in/camerond17" target="_blank" class="btn social-icon" title="LinkedIn"><i class="fa fa-linkedin fa-fw"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/CameronD17" target="_blank" class="btn social-icon" title="GitHub"><i class="fa fa-github fa-fw"></i></a>
-                    </li>
-                </ul>
-                <ul class="list-inline banner-social-buttons">                    
-                    <li>
-                        <a href="https://twitter.com/CameronD17" target="_blank" class="btn social-icon" title="Twitter"><i class="fa fa-twitter fa-fw"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://instagram.com/camerond17" target="_blank" class="btn social-icon" title="Instagram"><i class="fa fa-instagram fa-fw"></i></a>
-                    </li>
-                    <li>
-                        <a href="http://stackoverflow.com/users/1669993/camerond17" target="_blank" class="btn social-icon" title="StackOverflow"><i class="fa fa-stack-overflow fa-fw"></i></a>
-                    </li>
-                </ul>
+                <h1>Blog</h1>                
+                <table class="table blog-posts">
+                    {% for post in site.posts limit:3 %}
+                        <tr class="post-teaser">
+                            <td class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">#{{ post.number }} - {{ post.title }}</a></td>
+                            <td rowspan="2" class="post-date">{{ post.date | date: "%d %B %Y" }}<br \>{{ post.date | date: "%I:%M %p"}}</td>
+                        </tr>
+                        <tr>
+                            <td class="post-subtitle">{{ post.description }}</td>
+                        </tr>
+                        {% if forloop.last == false %}
+                        <tr>
+                            <td colspan="20"><div class="post-divider"></div></td>
+                        </tr>
+                        {% endif %}
+                    {% endfor %}
+                </table>              
+                <a href="/blog" class="blog-read-more">Archive</a>
             </div>
         </div>
     </section>
