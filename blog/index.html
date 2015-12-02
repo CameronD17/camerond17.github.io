@@ -1,0 +1,87 @@
+---
+layout:         blog
+title:          Cameron Doyle's Blog
+description:    Thanks for stopping by. My name is Cameron Doyle and I'm a 23-year-old software developer from the North-East of England, currently based in Edinburgh, Scotland. Right now, I work for CGI Group as a Performance Tester.
+---
+
+<div class="blog">
+    <!-- Blog Section -->
+    <section id="blog" class="content-section text-center">
+        <div class="container">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h1>Blog Archive</h1>                
+                <table class="table blog-posts">
+                    {% for post in site.posts %}
+                        <tr class="post-teaser">
+                            <td class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">#{{ post.number }} - {{ post.title }}</a></td>
+                            <td rowspan="2" class="post-date">{{ post.date | date: "%d %B %Y" }}<br \>{{ post.date | date: "%I:%M %p"}}</td>
+                        </tr>
+                        <tr>
+                            <td class="post-subtitle">{{ post.description }}</td>
+                        </tr>
+                        {% if forloop.last == false %}
+                        <tr>
+                            <td colspan="20"><div class="post-divider"></div></td>
+                        </tr>
+                        {% endif %}
+                    {% endfor %}
+                </table>              
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="content-section inverted">
+        <div class="container">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h1>About Me</h1>
+                <div class="col-lg-7">
+                    <table class="table about-table">
+                        <tr>
+                            <td class="about-icons about-subtitle"><i class="fa fa-user fa-fw"></i></td>
+                            <td class="about-subtitle">Name</td>
+                            <td class="about-info" itemprop="name">Cameron Doyle</td>
+                        </tr>
+                        <tr>
+                            <td class="about-icons about-subtitle"><i class="fa fa-globe fa-fw"></i></td>
+                            <td class="about-subtitle">Location</td>
+                            <td class="about-info" itemprop="homeLocation">Edinburgh, Scotland</td>
+                        </tr>
+                        <tr>
+                            <td class="about-icons about-subtitle"><i class="fa fa-birthday-cake fa-fw"></i></td>
+                            <td class="about-subtitle">Age</td>
+                            <td class="about-info">23 years</td>
+                        </tr>
+                        <tr>
+                            <td class="about-icons about-subtitle"><i class="fa fa-desktop fa-fw"></i></td>
+                            <td class="about-subtitle">Occupation</td>
+                            <td class="about-info" itemprop="jobTitle">Software Developer</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-lg-3 col-lg-offset-1" id="profile-img"></div>
+                
+                <div class="experience-divider"></div>
+                
+                <div class="col-lg-12">
+                    <div class="col-lg-3" id="blyth-img"></div>
+                    <div class="col-lg-9 about-paragraph">
+                        <p>I was born, raised, and educated in the beautiful north-east of <span itemprop="nationality">England</span>, first in the small seaside town of <a href="http://en.wikipedia.org/wiki/Blyth,_Northumberland" target="_blank"><span itemprop="birthPlace">Blyth</span>&nbsp;<i class="fa fa-external-link-square fa-fw"></i></a> in south-east Northumberland, and later in the thriving city of <a href="http://en.wikipedia.org/wiki/Newcastle_upon_Tyne" target="_blank">Newcastle-upon-Tyne&nbsp;<i class="fa fa-external-link-square fa-fw"></i></a>. After graduating in 2014 from Newcastle University, I moved north of the border to live and work in <a href="http://en.wikipedia.org/wiki/Edinburgh" target="_blank">Edinburgh&nbsp;<i class="fa fa-external-link-square fa-fw"></i></a>.</p>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="col-lg-9 about-paragraph">
+                        <p>From a young age, I've had a keen interest in all things technical, although I've never been able to pinpoint the start of this fascination. I enjoy writing code, designing and developing programs and games, and expanding my repertoire of languages and technologies. Most of my code projects are available on <a href="http://github.com/CameronD17" target="_blank">GitHub&nbsp;<i class="fa fa-external-link-square fa-fw"></i></a>.</p>
+                    </div>
+                    <div class="col-lg-3" id="code-img"></div>
+                </div>
+                <div class="col-lg-12">    
+                    <div class="col-lg-3" id="travel-img"></div>
+                    <div class="col-lg-9 about-paragraph">
+                        <p>When I'm <abbr title="Away From Keyboard">AFK</abbr>, I spend as much time as physically possible travelling the world, immersing myself in local cultures, and adding to my ever-expanding collection of Hard Rock Café t-shirts. When I'm not on the road (and sometimes when I am), I spend an unhealthy amount of time and money on my other two vices; third-wave coffee and single-malt Scotch.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</div>

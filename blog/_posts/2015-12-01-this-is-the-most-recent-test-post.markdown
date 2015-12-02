@@ -1,5 +1,6 @@
 ---
-number: 7
+permalink:      /blog/:title/
+number:         7
 layout:         post
 title:          "This is the most recent test post :)"
 date:           2015-12-01 10:03:00 +0000
