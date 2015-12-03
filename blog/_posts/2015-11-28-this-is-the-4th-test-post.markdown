@@ -1,10 +1,11 @@
 ---
-number: 4
-layout: post
-title:  "I AM NUMBER 4"
-date:   2015-11-28 13:03:00 +0000
-description:    "These words are just to test that I can actually use a description correctly"
-tags:           test, what are things
+permalink:  /blog/:title/
+number:     4
+layout:     post
+title:      "I AM NUMBER 4"
+date:       2015-11-28 13:03:00 +0000
+summary:    "These words are just to test that I can actually use a description correctly"
+tags:       test
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

@@ -303,7 +303,7 @@ layout: home
                             <td rowspan="2" class="post-date">{{ post.date | date: "%d %B %Y" }}<br \>{{ post.date | date: "%I:%M %p"}}</td>
                         </tr>
                         <tr>
-                            <td class="post-subtitle">{{ post.description }}</td>
+                            <td class="post-subtitle">{{ post.summary }}</td>
                         </tr>
                         {% if forloop.last == false %}
                         <tr>
