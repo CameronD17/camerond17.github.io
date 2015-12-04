@@ -3,6 +3,7 @@ title: Cameron Doyle
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "http://camerondoyle.co.uk"
 #url: "127.0.0.1:4000"
+permalink: :title/
 
 author:
     firstname: Cameron
