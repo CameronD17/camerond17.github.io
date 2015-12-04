@@ -62,17 +62,15 @@ summary:    Thanks for stopping by. My name is Cameron Doyle and I'm a 23-year-o
 
                     <div class="tab-pane fade" id="archive-by-category">
                         {% for tag in sortedtags %}
-                            <h4 class="archive-title"><a data-toggle="collapse" data-target="#{{ tag }}-read-more" aria-expanded="false" aria-controls="{{ tag }}-read-more">{{ tag }}</a></h4>
-                            <div class="collapse" id="{{ tag }}-read-more">
-                                <table class="table blog-posts">
-                                    {% for post in site.tags[tag] %}
-                                    <tr class="post-teaser">
-                                        <td class="post-title"><a href="{{ post.url | prepend: site.url }}">#{{ post.number }} - {{ post.title }}</a></td>
-                                        <td class="post-date">{{ post.date | date: "%d %B %Y" }}</td>
-                                    </tr>
-                                    {% endfor %}
-                                </table>
-                            </div>
+                            <h4 class="archive-title">{{ tag }}</h4>
+                            <table class="table blog-posts">
+                                {% for post in site.tags[tag] %}
+                                <tr class="post-teaser">
+                                    <td class="post-title"><a href="{{ post.url | prepend: site.url }}">#{{ post.number }} - {{ post.title }}</a></td>
+                                    <td class="post-date">{{ post.date | date: "%d %B %Y" }}</td>
+                                </tr>
+                                {% endfor %}
+                            </table>
                         {% endfor %}
                     </div>
                 </div>  
