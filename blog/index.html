@@ -21,7 +21,7 @@ summary:    Thanks for stopping by. My name is Cameron Doyle and I'm a 23-year-o
                     <h4>{{ post.date | date: "%d %B %Y" }} | 
                     {% for tag in sortedtags %}
                         {% if post.tags contains tag %}
-                        <a href="{{ tag.url }}">{{tag}}{% if forloop.last == false %},{% endif %}</a>
+                        <a href="#">{{tag}}{% if forloop.last == false %},{% endif %}</a>
                         {% endif %}
                     {% endfor %}</h4>
                     <p>{{ post.content }}</p>

@@ -1,5 +1,5 @@
 ---
-permalink:  blog/:title
+permalink:  /blog/:title/
 number:     1
 layout:     post
 title:      "This is the first test post!"
