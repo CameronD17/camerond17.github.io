@@ -7,7 +7,7 @@
 
 # Site settings
 title: Cameron Doyle
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://camerondoyle.co.uk"
 
 author:
