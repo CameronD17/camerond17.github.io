@@ -7,8 +7,9 @@
 
 # Site settings
 title: Cameron Doyle
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "http://camerondoyle.co.uk"
+#url: "127.0.0.1:4000"
 
 author:
     firstname: Cameron
@@ -22,7 +23,7 @@ author:
     instagram: camerond17
     stackoverflow: 1669993/camerond17
     
-description: > # this means to ignore newlines until "baseurl:"
+description: > # this means to ignore newlines until "url:"
   Personal portfolio website of Cameron Doyle, a programmer 
   and software engineer based in Edinburgh, Scotland.
 

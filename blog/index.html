@@ -17,7 +17,7 @@ summary:    Thanks for stopping by. My name is Cameron Doyle and I'm a 23-year-o
             <div class="col-lg-10 col-lg-offset-1">
                 <h1>Recent Post</h1>
                 {% for post in site.posts limit:1 %}
-                    <h2><a href="{{ post.url | prepend: site.baseurl }}">#{{ post.number }} - {{ post.title }}</a></h2>
+                    <h2><a href="{{ post.url | prepend: site.url }}">#{{ post.number }} - {{ post.title }}</a></h2>
                     <h4>{{ post.date | date: "%d %B %Y" }} | 
                     {% for tag in sortedtags %}
                         {% if post.tags contains tag %}
@@ -51,7 +51,7 @@ summary:    Thanks for stopping by. My name is Cameron Doyle and I'm a 23-year-o
                                 {% assign date = currentdate %}
                             {% endif %}
                             <tr class="post-teaser">
-                                <td class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">#{{ post.number }} - {{ post.title }}</a></td>
+                                <td class="post-title"><a href="{{ post.url | prepend: site.url }}">#{{ post.number }} - {{ post.title }}</a></td>
                                 <td class="post-date">{{ post.date | date: "%d %B %Y" }}</td>
                             </tr>
                             {% if forloop.last %}
@@ -67,7 +67,7 @@ summary:    Thanks for stopping by. My name is Cameron Doyle and I'm a 23-year-o
                                 <table class="table blog-posts">
                                     {% for post in site.tags[tag] %}
                                     <tr class="post-teaser">
-                                        <td class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">#{{ post.number }} - {{ post.title }}</a></td>
+                                        <td class="post-title"><a href="{{ post.url | prepend: site.url }}">#{{ post.number }} - {{ post.title }}</a></td>
                                         <td class="post-date">{{ post.date | date: "%d %B %Y" }}</td>
                                     </tr>
                                     {% endfor %}

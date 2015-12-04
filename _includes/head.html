@@ -7,13 +7,13 @@
     
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     
-    <link rel="shortcut icon" href="{{ 'assets/img/favicon.ico' | prepend: site.baseurl }}">    
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | replace:'blog.html','' | prepend: site.baseurl | prepend: site.url }}"/>
+    <link rel="shortcut icon" href="{{ 'assets/img/favicon.ico' | prepend: site.url }}">    
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | replace:'blog.html','' | prepend: site.url | prepend: site.url }}"/>
     
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans" type="text/css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans" type="text/css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Rock+Salt" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.url }}">
 </head>

@@ -299,7 +299,7 @@ layout: home
                 <table class="table blog-posts">
                     {% for post in site.posts limit:3 %}
                         <tr class="post-teaser">
-                            <td class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">#{{ post.number }} - {{ post.title }}</a></td>
+                            <td class="post-title"><a href="{{ post.url | prepend: site.url }}">#{{ post.number }} - {{ post.title }}</a></td>
                             <td rowspan="2" class="post-date">{{ post.date | date: "%d %B %Y" }}<br \>{{ post.date | date: "%I:%M %p"}}</td>
                         </tr>
                         <tr>
