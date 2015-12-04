@@ -1,5 +1,4 @@
 ---
-permalink:  /blog/:title/
 number:     4
 layout:     post
 title:      "I AM NUMBER 4"

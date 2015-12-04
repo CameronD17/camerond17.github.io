@@ -1,5 +1,4 @@
 ---
-permalink:  /blog/:title/
 number:     2
 layout:     post
 title:      "POST TWO"

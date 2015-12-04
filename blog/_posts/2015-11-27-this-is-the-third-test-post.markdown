@@ -1,5 +1,4 @@
 ---
-permalink:  /blog/:title/
 number:     3
 layout:     post
 title:      "THE THIRD"

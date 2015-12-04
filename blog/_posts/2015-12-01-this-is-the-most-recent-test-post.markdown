@@ -1,5 +1,4 @@
 ---
-permalink:  /blog/:title/
 number:     7
 layout:     post
 title:      "This is the most recent test post :)"

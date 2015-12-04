@@ -1,5 +1,4 @@
 ---
-permalink:  /blog/:title/
 number:     6
 layout:     post
 title:      "THE PENULTIMATE POST!"
