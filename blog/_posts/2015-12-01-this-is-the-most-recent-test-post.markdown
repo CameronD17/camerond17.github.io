@@ -1,10 +1,9 @@
 ---
-number:     7
 layout:     post
 title:      "This is the most recent test post :)"
 date:       2015-12-01 10:03:00 +0000
 summary:    "These words are just to test that I can actually use a description correctly"
-tags:       test blog jekyll
+tags:       test blog jekyll goals
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

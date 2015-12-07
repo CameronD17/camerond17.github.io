@@ -2,6 +2,13 @@
 layout: home
 ---
 
+{% capture tags %}
+    {% for tag in site.tags %}
+        {{ tag[0] }}
+    {% endfor %}
+{% endcapture %}
+{% assign sortedtags = tags | split:' ' | sort %}
+
 <div class="home">
     <!-- About Section -->
     <section id="about" class="content-section">
@@ -295,12 +302,15 @@ layout: home
     <section id="blog" class="content-section text-center inverted">
         <div class="container">
             <div class="col-lg-10 col-lg-offset-1">
-                <h1>Blog (Alpha - real men test in live)</h1>                
+                <h1>Blog (Alpha)</h1>                
                 <table class="table blog-posts">
                     {% for post in site.posts limit:3 %}
                         <tr class="post-teaser">
-                            <td class="post-title"><a href="{{ post.url | prepend: site.url }}">#{{ post.number }} - {{ post.title }}</a></td>
-                            <td rowspan="2" class="post-date">{{ post.date | date: "%d %B %Y" }}<br \>{{ post.date | date: "%I:%M %p"}}</td>
+                            <td class="post-title"><a href="{{ post.url | prepend: site.url }}">#{{ forloop.rindex }} - {{ post.title }}</a></td>
+                            <td rowspan="2" class="post-date">{{ post.date | date: "%d %B %Y" }}<br \>
+                            {% for tag in post.tags %}
+                                <a href="#">{{tag}}</a>{% unless post.tags.size == 1 %}{% if forloop.last == false %}, {% endif %}{% endunless %}
+                            {% endfor %}</td>
                         </tr>
                         <tr>
                             <td class="post-subtitle">{{ post.summary }}</td>
@@ -312,7 +322,7 @@ layout: home
                         {% endif %}
                     {% endfor %}
                 </table>              
-                <a href="/blog" class="blog-read-more">Archive</a>
+                <a href="/blog/" class="blog-read-more">Archive</a>
             </div>
         </div>
     </section>

@@ -1,6 +1,6 @@
 ---
 layout:     blog
-title:      Cameron Doyle - Blog
+title:      Blog Archive
 summary:    Thanks for stopping by. My name is Cameron Doyle and I'm a 23-year-old software developer from the North-East of England, currently based in Edinburgh, Scotland. Right now, I work for CGI Group as a Performance Tester.
 ---
 {% capture tags %}
@@ -15,16 +15,20 @@ summary:    Thanks for stopping by. My name is Cameron Doyle and I'm a 23-year-o
     <section id="about" class="content-section ">
         <div class="container">
             <div class="col-lg-10 col-lg-offset-1">
-                <h1>Recent Post</h1>
+                <h1>Newest Post</h1>
                 {% for post in site.posts limit:1 %}
-                    <h2><a href="{{ post.url | prepend: site.url }}">#{{ post.number }} - {{ post.title }}</a></h2>
+                    <h2><a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></h2>
                     <h4>{{ post.date | date: "%d %B %Y" }} | 
-                    {% for tag in sortedtags %}
-                        {% if post.tags contains tag %}
-                        <a href="#">{{tag}}{% if forloop.last == false %},{% endif %}</a>
-                        {% endif %}
+                    {% for tag in post.tags %}
+                        <a href="{{ site.url }}/blog/tag/{{tag}}">{{tag}}</a>{% unless post.tags.size == 1 %}{% if forloop.last == false %}, {% endif %}{% endunless %}
                     {% endfor %}</h4>
-                    <p>{{ post.content }}</p>
+                    {{ post.excerpt }} 
+                    <p><a class="read-more" data-toggle="collapse" data-target="#new-post-read-more" aria-expanded="false" aria-controls="new-post-read-more"><span>Read more&nbsp;</span><i class="fa fa-toggle-down"></i></a></p>              
+                    <div class="col-lg-12">
+                        <div class="collapse experience-section" id="new-post-read-more">
+                            <p>{{ post.content }}</p>
+                        </div>
+                    </div>
                 {% endfor %}
             </div>
         </div>
@@ -51,7 +55,7 @@ summary:    Thanks for stopping by. My name is Cameron Doyle and I'm a 23-year-o
                                 {% assign date = currentdate %}
                             {% endif %}
                             <tr class="post-teaser">
-                                <td class="post-title"><a href="{{ post.url | prepend: site.url }}">#{{ post.number }} - {{ post.title }}</a></td>
+                                <td class="post-title"><a href="{{ post.url | prepend: site.url }}">#{{ forloop.rindex }} - {{ post.title }}</a></td>
                                 <td class="post-date">{{ post.date | date: "%d %B %Y" }}</td>
                             </tr>
                             {% if forloop.last %}
@@ -65,10 +69,10 @@ summary:    Thanks for stopping by. My name is Cameron Doyle and I'm a 23-year-o
                             <h4 class="archive-title">{{ tag }}</h4>
                             <table class="table blog-posts">
                                 {% for post in site.tags[tag] %}
-                                <tr class="post-teaser">
-                                    <td class="post-title"><a href="{{ post.url | prepend: site.url }}">#{{ post.number }} - {{ post.title }}</a></td>
-                                    <td class="post-date">{{ post.date | date: "%d %B %Y" }}</td>
-                                </tr>
+                                    <tr class="post-teaser">
+                                        <td class="post-title"><a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></td>
+                                        <td class="post-date">{{ post.date | date: "%d %B %Y" }}</td>
+                                    </tr>
                                 {% endfor %}
                             </table>
                         {% endfor %}

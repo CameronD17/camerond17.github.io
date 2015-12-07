@@ -1,7 +1,6 @@
 ---
-number:     6
 layout:     post
-title:      "THE PENULTIMATE POST!"
+title:      "Test post, please ignore"
 date:       2015-11-30 13:03:00 +0000
 summary:    "This is just to test the penultimate description"
 tags:       test
