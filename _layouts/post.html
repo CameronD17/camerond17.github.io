@@ -21,10 +21,31 @@ layout: blog
     </div>
 </header>
 
-<div class="container">
-    <div class="col-lg-10 col-lg-offset-1">
-        {{ content }}
+<section class="content-section">
+    <div class="container">
+        <div class="col-lg-10 col-lg-offset-1">
+            {{ content }}
+        </div>
     </div>
-</div>
+</section>
+
+<section class="content-section inverted text-center">
+    <div class="container">
+        <div class="col-lg-10 col-lg-offset-1">
+            <div class="col-lg-6">
+            {% if page.previous.url %}
+                <h4>Previous Post</h4>
+                <h3><a class="prev" href="{{page.previous.url}}"><i class="fa fa-arrow-circle-o-left fa-fw"></i> {{page.previous.title}}</a></h3>
+            {% endif %}
+            </div>
+            <div class="col-lg-6">
+            {% if page.next.url %}
+                <h4>Next Post</h4>
+                <h3><a class="next" href="{{page.next.url}}">{{page.next.title}} <i class="fa fa-arrow-circle-o-right fa-fw"></i></a></h3>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
 
 
