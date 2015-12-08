@@ -1,6 +1,25 @@
 ---
 layout: blog
 ---
+<!-- Intro Header -->
+<header class="intro">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 intro-bg">
+                    <h1>
+                        {{ page.title }}
+                    </h1>
+                    <h4 class="intro-text">{{ page.date | date: "%d %B %Y" }} |
+                        {% for tag in page.tags %}
+                            <a href="{{ site.url }}/blog/tag/{{tag}}">{{tag}}</a>{% unless post.tags.size == 1 %}{% if forloop.rindex0 == 1 %} &{% elsif forloop.last == false %}, {% endif %}{% endunless %}
+                        {% endfor %}
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
 <div class="container">
     <div class="col-lg-10 col-lg-offset-1">

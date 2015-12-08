@@ -1,0 +1,29 @@
+---
+layout:     blog
+summary:    Thanks for stopping by. My name is Cameron Doyle and I'm a 23-year-old software developer from the North-East of England, currently based in Edinburgh, Scotland. Right now, I work for CGI Group as a Performance Tester.
+---
+
+<div class="container">
+    <div class="col-lg-10 col-lg-offset-1">
+        {% if site.tags[page.tag] %}
+            {% for post in site.tags[page.tag] %}
+                {% assign currentdate = post.date | date: "%B %Y" %}
+                {% if currentdate != date %}
+                    {% unless forloop.first %}</table>{% endunless %}
+                    <h4 class="archive-title">{{ currentdate }}</h4>
+                    <table class="table blog-posts">
+                    {% assign date = currentdate %}
+                {% endif %}
+                <tr class="post-teaser">
+                    <td class="post-title"><a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></td>
+                    <td class="post-date">{{ post.date | date: "%d %B %Y" }}</td>
+                </tr>
+                {% if forloop.last %}
+                    </table>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <h1>No posts found with the tag {{ page.tag }}!</h1>
+        {% endif %}
+    </div>
+</div>

@@ -1,7 +1,7 @@
 ---
 layout:     blog
-title:      Blog Archive
-summary:    Thanks for stopping by. My name is Cameron Doyle and I'm a 23-year-old software developer from the North-East of England, currently based in Edinburgh, Scotland. Right now, I work for CGI Group as a Performance Tester.
+title:      Archive
+summary:    My name is Cameron Doyle and I'm a 23-year-old software developer, currently living in Edinburgh. The following articles are the ramblings of a madman.
 ---
 {% capture tags %}
     {% for tag in site.tags %}
@@ -10,17 +10,30 @@ summary:    Thanks for stopping by. My name is Cameron Doyle and I'm a 23-year-o
 {% endcapture %}
 {% assign sortedtags = tags | split:' ' | sort %}
 
+<!-- Intro Header -->
+<header class="intro">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 intro-bg">
+                    <h1>{{ page.title }}</h1>
+                    <p>{{ page.summary }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
 <div class="blog">
 
     <section id="about" class="content-section ">
         <div class="container">
             <div class="col-lg-10 col-lg-offset-1">
-                <h1>Newest Post</h1>
                 {% for post in site.posts limit:1 %}
                     <h2><a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></h2>
                     <h4>{{ post.date | date: "%d %B %Y" }} | 
                     {% for tag in post.tags %}
-                        <a href="{{ site.url }}/blog/tag/{{tag}}">{{tag}}</a>{% unless post.tags.size == 1 %}{% if forloop.last == false %}, {% endif %}{% endunless %}
+                        <a href="{{ site.url }}/blog/tag/{{tag}}">{{tag}}</a>{% unless post.tags.size == 1 %}{% if forloop.rindex0 == 1 %} &{% elsif forloop.last == false %}, {% endif %}{% endunless %}
                     {% endfor %}</h4>
                     {{ post.excerpt }} 
                     <p><a class="read-more" data-toggle="collapse" data-target="#new-post-read-more" aria-expanded="false" aria-controls="new-post-read-more"><span>Read more&nbsp;</span><i class="fa fa-toggle-down"></i></a></p>              
