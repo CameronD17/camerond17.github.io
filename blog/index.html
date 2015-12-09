@@ -48,7 +48,7 @@ summary:    My name is Cameron Doyle and I'm a 23-year-old software developer, c
             <div class="col-lg-10 col-lg-offset-1">
                 <h1>Blog Archive</h1>
                 
-                <div class="col-lg-6">
+                <div class="col-lg-6 archive-divider-left">
                 <h2>By Date</h2>
                 {% assign counter = 0 %}
                 {% for post in site.posts %}
@@ -57,7 +57,7 @@ summary:    My name is Cameron Doyle and I'm a 23-year-old software developer, c
                     {% assign counter = counter | plus: 1 %}
                     {% if currentdate != prevdate %}
                         <h4 class="archive-title"><a class="read-more" data-toggle="collapse" data-target="#{{ currentdate }}-read-more" aria-expanded="false" aria-controls="{{ currentdate }}-read-more">{{ currentdate | date: "%B %Y" }} ({{ counter }})</a></h4>
-                        <div class="collapse experience-section" id="{{ currentdate }}-read-more">
+                        <div class="collapse archive-section" id="{{ currentdate }}-read-more">
                             <table class="table blog-posts">
                                 {% assign offby = forloop.index | minus: counter %}
                                 {% for postdate in site.posts limit: counter offset: offby %}
@@ -72,12 +72,11 @@ summary:    My name is Cameron Doyle and I'm a 23-year-old software developer, c
                     {% endif %}
                 {% endfor %}
                 </div>
-                
-                <div class="col-lg-6">
+                <div class="col-lg-6 archive-divider-right">
                 <h2>By Category</h2>
                 {% for tag in sortedtags %}
                     <h4 class="archive-title"><a class="read-more" data-toggle="collapse" data-target="#{{ tag }}" aria-expanded="false" aria-controls="{{ tag }}">{{ tag }} ({{ site.tags[tag] | size}})</a></h4>
-                    <div id="{{tag}}" class="collapse experience-section" id="{{ tag }}-read-more">
+                    <div id="{{tag}}" class="collapse archive-section" id="{{ tag }}-read-more">
                         <table class="table blog-posts">
                             {% for post in site.tags[tag] %}
                                 <tr class="post-teaser">
