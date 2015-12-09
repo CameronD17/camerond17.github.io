@@ -125,3 +125,8 @@ $('.skill-toggle').click(function() {
         });
     }
 });
+
+// Open accordion automatically (C) Cameron Doyle
+$(document).ready(function() {
+    location.hash && $(location.hash + '.collapse').collapse('show');
+}

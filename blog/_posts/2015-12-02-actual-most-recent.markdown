@@ -3,7 +3,7 @@ layout:     post
 title:      "Actual Most Recent"
 date:       2015-12-02 10:03:00 +0000
 summary:    "These words are just to test that I can actually use a description correctly"
-tags:       blog goals
+tags:       final goals
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

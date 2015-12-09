@@ -464,9 +464,10 @@ a:focus {
 }
 
 .archive-title {
+    font-style: normal;
     text-align: left;
     margin: 0;
-    padding: 30px 0 15px 0;
+    padding: 0;
 }
 
 /* Contact Section & Footer */
