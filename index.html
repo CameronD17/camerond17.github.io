@@ -309,7 +309,7 @@ layout: home
                             <td class="post-title"><a href="{{ post.url | prepend: site.url }}">#{{ forloop.rindex }} - {{ post.title }}</a></td>
                             <td rowspan="2" class="post-date">{{ post.date | date: "%d %B %Y" }}<br \>
                             {% for tag in post.tags %}
-                                <a href="{{ site.url }}/blog/#{{tag}}" class="read-more page-scroll" data-toggle="collapse" data-target="#{{ tag }}-read-more" aria-expanded="false" aria-controls="{{ tag }}-read-more">{{tag}}</a>{% unless post.tags.size == 1 %}{% if forloop.rindex0 == 1 %} &{% elsif forloop.last == false %}, {% endif %}{% endunless %}
+                                <a href="{{ site.url }}/blog/#{{tag}}">{{tag}}</a>{% unless post.tags.size == 1 %}{% if forloop.rindex0 == 1 %} &{% elsif forloop.last == false %}, {% endif %}{% endunless %}
                             {% endfor %}</td>
                         </tr>
                         <tr>
