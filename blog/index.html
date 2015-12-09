@@ -43,7 +43,7 @@ summary:    My name is Cameron Doyle and I'm a 23-year-old software developer, c
     </section>
 
     <!-- Archive Section -->
-    <section id="blog" class="content-section inverted text-center">
+    <section id="blog-archive" class="content-section inverted text-center">
         <div class="container">
             <div class="col-lg-10 col-lg-offset-1">
                 <h1>Blog Archive</h1>
@@ -76,8 +76,8 @@ summary:    My name is Cameron Doyle and I'm a 23-year-old software developer, c
                 <div class="col-lg-6">
                 <h2>By Category</h2>
                 {% for tag in sortedtags %}
-                    <h4 id="{{tag}}" class="archive-title"><a class="read-more" data-toggle="collapse" data-target="#{{ tag }}-read-more" aria-expanded="false" aria-controls="{{ tag }}-read-more">{{ tag }} ({{ site.tags[tag] | size}})</a></h4>
-                    <div class="collapse experience-section" id="{{ tag }}-read-more">
+                    <h4 class="archive-title"><a class="read-more" data-toggle="collapse" data-target="#{{ tag }}" aria-expanded="false" aria-controls="{{ tag }}">{{ tag }} ({{ site.tags[tag] | size}})</a></h4>
+                    <div id="{{tag}}" class="collapse experience-section" id="{{ tag }}-read-more">
                         <table class="table blog-posts">
                             {% for post in site.tags[tag] %}
                                 <tr class="post-teaser">

@@ -29,8 +29,8 @@ $(function() {
 function openCollapsed() {
     if(window.location.hash) {
         var $target = $('body').find(window.location.hash);
-        if($target.hasClass('collapse')) {
-            var $target.collapse('show');
+        if($target.hasClass('collapse') && !($target.hasClass('in'))) {
+            $target.addClass('in');
         }
     }
 } window.onload = openCollapsed();
