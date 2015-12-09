@@ -25,6 +25,16 @@ $(function() {
     });
 });
 
+// Open contextual collapsed sections
+function openCollapsed() {
+    if(window.location.hash) {
+        var $target = $('body').find(window.location.hash);
+        if($target.hasClass('collapse')) {
+            var $target.collapse('show');
+        }
+    }
+} window.onload = openCollapsed();
+
 // Avoid loading images on mobile (C) Cameron Doyle
 var loaded = false;
 
@@ -125,8 +135,3 @@ $('.skill-toggle').click(function() {
         });
     }
 });
-
-// Open accordion automatically (C) Cameron Doyle
-$(document).ready(function() {
-    location.hash && $(location.hash + '.collapse').collapse('show');
-}
