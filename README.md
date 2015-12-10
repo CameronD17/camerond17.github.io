@@ -1,8 +1,8 @@
 # [CameronDoyle.co.uk] (http://camerondoyle.co.uk)
 
-camerondoyle.co.uk is a single-page portfolio website for (unsurpisingly) Cameron Doyle
+camerondoyle.co.uk is a single-page portfolio website for, unsurpisingly, **Cameron Doyle** (that's me). It also houses my personal blog, which is updated as and when I remember.
 
-The design is built on the [Start Bootstrap](http://startbootstrap.com/) [Grayscale](http://startbootstrap.com/template-overviews/grayscale/) template, which is itself based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+The site is generated using [Jekyll](http://jekyllrb.com), and the design is based on the [Start Bootstrap](http://startbootstrap.com/) [Grayscale](http://startbootstrap.com/template-overviews/grayscale/) template, which is itself based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
 
 ## Bugs / Issues
 
