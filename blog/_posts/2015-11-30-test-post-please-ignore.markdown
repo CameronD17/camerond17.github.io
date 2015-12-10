@@ -2,7 +2,7 @@
 layout:     post
 title:      "Test post, please ignore"
 date:       2015-11-30 13:03:00 +0000
-tags:       test
+tags:       blog
 ---
 So. Blogging. Historically, not something I've ever been very good at. I always enjoyed building the blog or writing the code more than filling the pages with beautiful prose. Hey, that was almost Seuss-like!
 
@@ -18,6 +18,6 @@ Well, on the off-chance that I give my site a total overhaul by the time you com
 
 ![Screenshot of the blog]({{site.url}}/blog/images/blog_screenshot.jpg)
 
-I think this is long enough now to qualify as a full post. BYE!
+I think this is long enough now to qualify as a full post. I'm not going to count the words, but I imagine this will trigger the page-length-in-minutes counter!
 
 [jekyll]: http://jekyllrb.com/
