@@ -442,8 +442,8 @@ a:focus {
     width: 25%;
 }
 
-.post-subtitle {
-    font-size: 14px;
+.post-excerpt {
+    font-size: 16px;
     font-style: italic;
     text-align: left;
 }
