@@ -463,6 +463,10 @@ a:focus {
     column-span: all;
 }
 
+.post-read-more{
+    text-align: center;
+}
+
 .archive-title {
     margin: 0;
     padding: 15px 0 15px 0;

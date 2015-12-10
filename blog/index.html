@@ -36,7 +36,10 @@ summary:    My name is Cameron Doyle and I'm a 23-year-old software developer, c
                         <a href="#{{ tag }}" class="page-scroll" data-toggle="collapse" data-target="#{{ tag }}" aria-expanded="false" aria-controls="{{ tag }}">{{tag}}</a>{% unless post.tags.size == 1 %}{% if forloop.rindex0 == 1 %} &{% elsif forloop.last == false %}, {% endif %}{% endunless %}
                     {% endfor %} | {{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min</h4>
                     {{ post.excerpt }} 
-                    <p><a href="{{ post.url | prepend: site.url }}">Read more</a></p>              
+                    <p class="post-read-more"><a class="read-more" data-toggle="collapse" data-target="#post-expand" aria-expanded="false" aria-controls="post-expand"><span>Read More&nbsp;</span><i class="fa fa-toggle-down"></i></a></p>
+                    <div class="collapse" id="post-expand">
+                        {{ post.content | remove: post.excerpt }}
+                    </div>
                 {% endfor %}
             </div>
         </div>
