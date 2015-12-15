@@ -2,13 +2,6 @@
 layout: home
 ---
 
-{% capture tags %}
-    {% for tag in site.tags %}
-        {{ tag[0] }}
-    {% endfor %}
-{% endcapture %}
-{% assign sortedtags = tags | split:' ' | sort %}
-
 <div class="home">
     <!-- About Section -->
     <section id="about" class="content-section">

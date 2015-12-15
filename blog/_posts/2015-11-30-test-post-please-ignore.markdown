@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Test post, please ignore"
-date:       2015-11-30 13:03:00 +0000
+date:       2015-11-30 13:00:00 +0000
 tags:       blog
 ---
 So. Blogging. Historically, not something I've ever been very good at. I always enjoyed building the blog or writing the code more than filling the pages with beautiful prose. Hey, that was almost Seuss-like!
