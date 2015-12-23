@@ -282,7 +282,7 @@ a:focus {
 /* About Section */
 
 .abbr {
-    border-bottom:1px dotted #FFFFFF;
+    border-bottom:1px dotted #000;
 }
 
 .about-img {
@@ -440,11 +440,29 @@ a:focus {
     text-align: left;
 }
 
-.post-date {
+.blog-teaser-post-date {
     font-size: 16px;
     vertical-align: middle !important;
     text-align: right;
     width: 25%;
+}
+
+.blog-teaser-wordcount {
+    display: none;
+}
+
+.blog-teaser-tag {
+    display: none;
+}
+
+@media(min-width:768px){
+    .blog-teaser-wordcount {
+        display: inline;
+    }
+    
+    .blog-teaser-tag {
+        display: inline;
+    }
 }
 
 .post-excerpt {
@@ -472,26 +490,29 @@ a:focus {
     text-align: center;
 }
 
-.archive-title {
-    margin: 0;
-    padding: 15px 0 15px 0;
-}
-
 .archive-section {
     width: 100%;
     padding: 0 10px;
-    border-bottom: 2px solid rgba(000,000,000,0.9);
 }
 
-.archive-divider-left{
-    height: 100%;
-    border-right: 2px solid black;
-}
 
-.archive-divider-right{
-    height: 100%;
-    border-left: 2px solid black;
-    margin-left: -2px;
+@media(min-width:1200px){
+    
+    .archive-title {
+        margin: 0;
+        padding: 15px 0 15px 0;
+    } 
+    
+    .archive-divider-left{
+        height: 100%;
+        border-right: 2px solid black;
+    }
+
+    .archive-divider-right{
+        height: 100%;
+        border-left: 2px solid black;
+        margin-left: -2px;
+    }
 }
 
 /* Contact Section & Footer */
@@ -520,24 +541,40 @@ footer {
 }
 
 .left-footer {
-    float: left;
-    width: 50%;
+    width: 100%;    
+    text-align: center;
 }
 
 .left-footer p {
     font-size: 15px;
-    text-align: left;
 }
 
 .right-footer {
-    float: right;
-    width: 50%;
+    display: none;
 }
 
-.right-footer p, .right-footer a {
-    font-size: 15px;
-    text-align: right;
-    margin: 5px 0;
+@media(min-width:768px){
+    .left-footer {
+        float: left;
+        width: 50%;
+    }
+
+    .left-footer p {
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .right-footer {
+        display: inline;
+        float: right;
+        width: 50%;
+    }
+
+    .right-footer p, .right-footer a {
+        font-size: 15px;
+        text-align: right;
+        margin: 5px 0;
+    }
 }
 
 .fa { 

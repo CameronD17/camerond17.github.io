@@ -12,33 +12,33 @@ function loadImages() {
         profileImg.className="img-circle about-img";
         profile.appendChild(profileImg);
         
-        var blyth = document.getElementById("blyth-img");
+        var blyth = document.getElementById("abt-blyth-img");
         var blythImg=document.createElement("img");
-        blythImg.src="assets/img/blyth.jpg"
+        blythImg.src="assets/img/abt_blyth.jpg"
         blythImg.className="img-circle";
         blyth.appendChild(blythImg);
         
-        var code = document.getElementById("code-img");        
+        var code = document.getElementById("abt-code-img");        
         var codeImg=document.createElement("img");
-        codeImg.src="assets/img/code.jpg"
+        codeImg.src="assets/img/abt_code.jpg"
         codeImg.className="img-circle";
         code.appendChild(codeImg);
         
-        var travel = document.getElementById("travel-img");
+        var travel = document.getElementById("abt-travel-img");
         var travelImg=document.createElement("img");
-        travelImg.src="assets/img/travel.jpg"
+        travelImg.src="assets/img/abt_travel.jpg"
         travelImg.className="img-circle";
         travel.appendChild(travelImg);
         
-        var cgi = document.getElementById("cgi-img");
+        var cgi = document.getElementById("exp-cgi-img");
         var cgiImg=document.createElement("img");
-        cgiImg.src="assets/img/cgi_logo.png"
+        cgiImg.src="assets/img/exp_cgi.jpg"
         cgiImg.className="img-circle";
         cgi.appendChild(cgiImg);
         
-        var graduation = document.getElementById("graduation-img");
+        var graduation = document.getElementById("exp-ncl-img");
         var graduationImg=document.createElement("img");
-        graduationImg.src="assets/img/graduation.jpg"
+        graduationImg.src="assets/img/exp_ncl.jpg"
         graduationImg.className="img-circle";
         graduation.appendChild(graduationImg);
     }
