@@ -20,6 +20,5 @@ author:
 description: > # this means to ignore newlines until "url:"
   Personal portfolio website of Cameron Doyle, a programmer 
   and software engineer based in Edinburgh, Scotland.
-
 # Build settings
 markdown: kramdown
