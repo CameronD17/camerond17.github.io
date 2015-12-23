@@ -557,10 +557,6 @@ footer {
     .left-footer {
         float: left;
         width: 50%;
-    }
-
-    .left-footer p {
-        font-size: 15px;
         text-align: left;
     }
 
