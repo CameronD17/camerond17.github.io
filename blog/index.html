@@ -67,7 +67,7 @@ summary:    My name is Cameron Doyle and I'm a 23-year-old software developer, c
                                 {% for postdate in site.posts limit: counter offset: offby %}
                                 <tr class="post-teaser">
                                     <td class="post-title"><a href="{{ postdate.url | prepend: site.url }}">{{ postdate.title }}</a></td>
-                                    <td class="post-date">{{ postdate.date | date: "%a, ~%dth" | replace: '~0','' | replace: '~','' | replace: '1th','1st' | replace: '2th','2nd' | replace: '3th','3rd' | replace: '11st','11th' | replace: '12nd','12th' | replace: '13rd','13th' }}</td>
+                                    <td class="blog-teaser-post-date">{{ postdate.date | date: "%a, ~%dth" | replace: '~0','' | replace: '~','' | replace: '1th','1st' | replace: '2th','2nd' | replace: '3th','3rd' | replace: '11st','11th' | replace: '12nd','12th' | replace: '13rd','13th' }}</td>
                                 </tr>
                                 {% endfor %}
                             </table>
@@ -85,7 +85,7 @@ summary:    My name is Cameron Doyle and I'm a 23-year-old software developer, c
                             {% for post in site.tags[tag] %}
                                 <tr class="post-teaser">
                                     <td class="post-title"><a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></td>
-                                    <td class="post-date">{{ post.date | date: "%d %b %Y" }}</td>
+                                    <td class="blog-teaser-post-date">{{ post.date | date: "%d %b %Y" }}</td>
                                 </tr>
                             {% endfor %}
                         </table>
