@@ -42,7 +42,7 @@ Outcome: Done. Account closed in April.
 
 > Halifax Student overdraft paid off
 
-Outcome: Done. I borrowed some money from family to pay this off, but I repayed it all in full in August.
+Outcome: Done. I borrowed some money from family to pay this off, but I repaid it all in full in August.
 
 > Two months expenses in emergency fund / £3000 in travel fund
 
@@ -50,7 +50,7 @@ Outcome: Technically, no. I do have a fuller emergency fund (six months expenses
 
 > Identify and control poor spending habits
 
-Outcome: Hmm. Yes and no. I do know where I'm leaking money now, but I haven't really plugged the gaps, because I enjoy the outcome of most of them! (This loops back to the rampant alcoholism)
+Outcome: Hmm. Yes and no. I do know where I'm leaking money now, but I haven't really plugged the gaps, because I enjoy the outcome of most of them! (This loops back to the rampant alcoholism.)
 
 > Budget tracker kept up to date and accurate, and begin using YNAB regularly
 
@@ -69,6 +69,8 @@ Outcome: Nope. Totally forgot I even wanted to do this.
 > Develop a small game using a freeware game engine (UDK / Unity)
 
 Outcome: Not yet, although I have downloaded Unity, and I imagine I'll look into this in the next few months.
+
+All in all, I think I did okay with hitting my goals (bearing in mind I totally forgot about them). I'm hoping in 2016 I'll be able to focus more on my goals, as I'm getting more settled in Edinburgh and I can get myself into a better routine; hopefully I'll be writing a similarly positive post in twelve months time! 
 
 [fat-mac]: http://i.imgur.com/TBt8Bqe.jpg
 [reddit-post]: https://www.reddit.com/r/Scotland/comments/3icu1i/youre_talking_to_a_foreigner_about_scotland_whats/
