@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Retrospection"
-date:       2015-12-23 20:30:00 +0000
+date:       2015-12-26 15:00:00 +0000
 tags:       personal
 ---
 In a similar vein to birthdays, the worst part about a new year is the realisation that you're getting old. Or maybe when you're old enough to realise that, it's already too late? Damn, I sure hope that's not the case.
@@ -11,7 +11,6 @@ In a similar vein to birthdays, the worst part about a new year is the realisati
 This time last year, I sat and reflected on 2014. I'd had a great year, graduating university, starting a new job, moving back to Edinburgh, travelling eastern Europe, etc.
 But, for some reason, I still felt unfulfilled. I thought a lot, considered what my priorities were, and wrote myself a list of goals; and promptly forgot all about them (in fact, the post "New Year, New Me" was the last post I ever wrote in my old blog.)
 However, a few weeks ago when I was designing this blog, I came across that very post, and figured I would see how successful I was at meeting my targets:
-
 
 ## Health and Fitness
 
@@ -29,8 +28,7 @@ Outcome: I regressed into my bad habits in April, and started smoking again at s
 
 > No alcohol outside of social events, and none at all for the first six weeks of the year.
 
-Outcome: HA. A Geordie living in Scotland with a love of whisky, this was never going to happen. Although I did avoid alcohol for the first six weeks of the year, I've now regressed back to rampant alcoholism.
-
+Outcome: HA. A Geordie living in Scotland with a love of whisky, this was never going to happen. Although I did avoid alcohol for the first six weeks of the year, I've now regressed back to [rampant alcoholism][reddit-post].
 
 ## Finance
 
@@ -58,7 +56,6 @@ Outcome: Hmm. Yes and no. I do know where I'm leaking money now, but I haven't r
 
 Outcome: Dropped the budget tracker pretty early on, but I've been using YNAB4 all year (and become a little cult-like in my following). I've also started using the beta version of YNAB5, and I'll write a review on it once I'm a little more comfortable with it.
 
-
 ## Game Development
 
 > Finish the updated Tower Defence game.
@@ -74,3 +71,4 @@ Outcome: Nope. Totally forgot I even wanted to do this.
 Outcome: Not yet, although I have downloaded Unity, and I imagine I'll look into this in the next few months.
 
 [fat-mac]: http://i.imgur.com/TBt8Bqe.jpg
+[reddit-post]: https://www.reddit.com/r/Scotland/comments/3icu1i/youre_talking_to_a_foreigner_about_scotland_whats/

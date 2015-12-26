@@ -69,8 +69,12 @@ As 2015 was a fairly successful year for my financial goals, 2016 will be essent
 > - Write a short story / novella surrounding the Tower Defence universe
 > - Develop a small game using a freeware game engine (UDK / Unity)
 
-Last year, I confined my goals TODO: FINISH
+Last year, I confined my goals to game development, rather than general development. At the time that was a good idea, but since then I've spread my wings a little and learned a few more languages unrelated to game development.
 
+That said, I don't really know where I want to go next. With that in mind, I only have two development-based goals this year:
+
+- Continue developing and improving my personal website/blog
+- Learn a new language and use it in a work/professional capacity
 
 
 [retrospection-post]: {% post_url 2015-12-23-retrospection %}
