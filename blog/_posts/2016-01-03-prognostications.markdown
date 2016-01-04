@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Prognostications"
-date:       2015-12-23 14:00:00 +0000
+date:       2016-01-03 14:00:00 +0000
 tags:       personal
 ---
 
@@ -11,7 +11,7 @@ I awoke in time to watch the day break this morning. Since then, there's been a 
 
 I waved off the last of my Hogmanay guests last night, and tomorrow I'm back at work (no Bank Holiday for me, get out the violins). It's been a pleasant end to the year, and it feels like as good a time as any to think about what I'd like to accomplish over the next twelve months.
 
-As I went over in my [last post][retrospection-post], I set myself a lot of goals for 2015. On the whole, despite only hitting maybe half of my targets, I think that they make a good foundation to build upon:
+As I went over in my [last post]({% post_url 2015-12-26-retrospection %}), I set myself a lot of goals for 2015. On the whole, despite only hitting maybe half of my targets, I think that they make a good foundation to build upon:
 
 ## Health and Fitness
 
@@ -76,5 +76,4 @@ That said, I don't really know where I want to go next. With that in mind, I onl
 - Continue developing and improving my personal website/blog
 - Learn a new language and use it in a work/professional capacity
 
-
-[retrospection-post]: {% post_url 2015-12-23-retrospection %}
+Since this blog is now tied to a website I've been actively maintaining, I will probably remember to follow these better than last year. So says the eternal optimist inside me.
