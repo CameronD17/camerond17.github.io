@@ -76,7 +76,7 @@ title:      Archive
                                 {% assign offby = forloop.index | minus: counter %}
                                 {% for postdate in site.posts limit: counter offset: offby %}
                                 <tr class="post-teaser">
-                                    <td class="post-title"><a href="{{ postdate.url | prepend: site.url }}"><abbr title="{{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min read - {{ post.content | number_of_words }} words">{{ postdate.title }}</abbr></a></td>
+                                    <td class="post-title"><a href="{{ postdate.url | prepend: site.url }}"><abbr title="{{ postdate.content | number_of_words | divided_by: 200 | plus: 1 }} min read - {{ postdate.content | number_of_words }} words">{{ postdate.title }}</abbr></a></td>
                                     <td class="blog-teaser-post-date">{{ postdate.date | date: "%a, ~%dth" | replace: '~0','' | replace: '~','' | replace: '1th','1st' | replace: '2th','2nd' | replace: '3th','3rd' | replace: '11st','11th' | replace: '12nd','12th' | replace: '13rd','13th' }}</td>
                                 </tr>
                                 {% endfor %}
@@ -94,7 +94,7 @@ title:      Archive
                         <table class="table blog-posts">
                             {% for post in site.tags[tag] %}
                                 <tr class="post-teaser">
-                                    <td class="post-title"><a href="{{ post.url | prepend: site.url }}"><abbr title="{{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min read - {{ post.content | number_of_words }} words">{{ postdate.title }}</abbr></a></td>
+                                    <td class="post-title"><a href="{{ post.url | prepend: site.url }}"><abbr title="{{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min read - {{ post.content | number_of_words }} words">{{ post.title }}</abbr></a></td>
                                     <td class="blog-teaser-post-date">{{ post.date | date: "%d %b %Y" }}</td>
                                 </tr>
                             {% endfor %}
