@@ -8,11 +8,11 @@ layout: blog
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 intro-bg">
                     <h1>
-                        {{ post.title }}
+                        {{ page.title }}
                     </h1>
-                    <h4 class="intro-text">{{ post.date | date: "%d %B %Y" }} |
-                        {% for tag in post.tags %}
-                            <a href="{{ site.url }}/blog/#{{tag}}">{{tag}}</a>{% unless post.tags.size == 1 %}{% if forloop.rindex0 == 1 %} &{% elsif forloop.last == false %}, {% endif %}{% endunless %}
+                    <h4 class="intro-text">{{ page.date | date: "%d %B %Y" }} |
+                        {% for tag in page.tags %}
+                            <a href="{{ site.url }}/blog/#{{tag}}">{{tag}}</a>{% unless page.tags.size == 1 %}{% if forloop.rindex0 == 1 %} &{% elsif forloop.last == false %}, {% endif %}{% endunless %}
                         {% endfor %} | <abbr title="{{ post.content | number_of_words }} words">{{ post.content | number_of_words | divided_by: 200 | plus: 1 }} mins</abbr>
                     </h4>
                 </div>
@@ -33,15 +33,15 @@ layout: blog
     <div class="container">
         <div class="col-lg-10 col-lg-offset-1">
             <div class="col-lg-6">
-            {% if post.previous.url %}
+            {% if page.previous.url %}
                 <h4>Previous Post</h4>
-                <h3><a class="prev" href="{{ post.previous.url }}"><i class="fa fa-arrow-circle-o-left fa-fw"></i> {{ post.previous.title }}</a></h3>
+                <h3><a class="prev" href="{{ page.previous.url }}"><i class="fa fa-arrow-circle-o-left fa-fw"></i> {{ page.previous.title }}</a></h3>
             {% endif %}
             </div>
             <div class="col-lg-6">
-            {% if post.next.url %}
+            {% if page.next.url %}
                 <h4>Next Post</h4>
-                <h3><a class="next" href="{{ post.next.url }}">{{ post.next.title }} <i class="fa fa-arrow-circle-o-right fa-fw"></i></a></h3>
+                <h3><a class="next" href="{{ page.next.url }}">{{ page.next.title }} <i class="fa fa-arrow-circle-o-right fa-fw"></i></a></h3>
             {% endif %}
             </div>
         </div>
