@@ -65,8 +65,8 @@ As 2015 was a fairly successful year for my financial goals, 2016 will be essent
 
 > 2015 goals 
 > 
-> - Finish the updated Tower Defence game.
-> - Write a short story / novella surrounding the Tower Defence universe
+> + Finish the updated Tower Defence game.
+> * Write a short story / novella surrounding the Tower Defence universe
 > - Develop a small game using a freeware game engine (UDK / Unity)
 
 Last year, I confined my goals to game development, rather than general development. At the time that was a good idea, but since then I've spread my wings a little and learned a few more languages unrelated to game development.

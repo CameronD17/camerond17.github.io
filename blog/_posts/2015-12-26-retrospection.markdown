@@ -22,7 +22,7 @@ Outcome: [No][fat-mac]
 
 Outcome: On and off. 5-a-side has been a constant Monday night feature, but I've drifted in and out of love with the gym. As of today, it's been about two months since I was last there; but on the other hand, I have taken up running, and run about 10 miles a week. So there's that. I imagine I'll write a bit more about my running in the coming months actually, although I'm taking a small break over the festive period.
 
->  Zero cigarettes for 2015
+> Zero cigarettes for 2015
 
 Outcome: I regressed into my bad habits in April, and started smoking again at social events. However, after a chance encounter in Cologne in June (which I will write about at a later date), I quit entirely, and have been smoke-free for six months now.
 
