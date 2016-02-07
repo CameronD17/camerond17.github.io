@@ -25,7 +25,7 @@ title:      Archive
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 intro-bg">
                     <h1>{{ page.title }}</h1>
-                    <p>I've written a total of {{ postcount }} posts on this site, consisting of {{ totalwords }} words (an average of {{ totalwords | divided_by: postcount }} words per article). The most recent post, <a href="{{ site.posts.first.url | prepend: site.url }}">{{ site.posts.first.title }}</a>, can be read below; the full sorted archive of posts is available at the bottom of this page.</p>
+                    <p>I've written a total of {{ postcount }} posts on this site, consisting of {{ totalwords }} words (an average of {{ totalwords | divided_by: postcount }} words per article). The most recent post, <a href="{{ site.posts.first.url | prepend: site.baseurl }}">{{ site.posts.first.title }}</a>, can be read below; the full sorted archive of posts is available at the bottom of this page.</p>
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@ title:      Archive
         <div class="container">
             <div class="col-lg-10 col-lg-offset-1">
                 {% for post in site.posts limit:1 %}
-                    <h2>Latest Post - <a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></h2>
+                    <h2>Latest Post - <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
                     <h4>{{ post.date | date: "%d %B %Y" }} | 
                     {% for tag in post.tags %}
                         <a href="#blog-archive" class="page-scroll" data-toggle="collapse" data-target="#{{ tag }}" aria-expanded="false" aria-controls="{{ tag }}">{{tag}}</a>
@@ -76,7 +76,7 @@ title:      Archive
                                 {% assign offby = forloop.index | minus: counter %}
                                 {% for postdate in site.posts limit: counter offset: offby %}
                                 <tr class="post-teaser">
-                                    <td class="post-title"><a href="{{ postdate.url | prepend: site.url }}"><abbr title="{{ postdate.content | number_of_words | divided_by: 200 | plus: 1 }} min read - {{ postdate.content | number_of_words }} words">{{ postdate.title }}</abbr></a></td>
+                                    <td class="post-title"><a href="{{ postdate.url | prepend: site.baseurl }}"><abbr title="{{ postdate.content | number_of_words | divided_by: 200 | plus: 1 }} min read - {{ postdate.content | number_of_words }} words">{{ postdate.title }}</abbr></a></td>
                                     <td class="blog-teaser-post-date">{{ postdate.date | date: "%a, ~%dth" | replace: '~0','' | replace: '~','' | replace: '1th','1st' | replace: '2th','2nd' | replace: '3th','3rd' | replace: '11st','11th' | replace: '12nd','12th' | replace: '13rd','13th' }}</td>
                                 </tr>
                                 {% endfor %}
@@ -94,7 +94,7 @@ title:      Archive
                         <table class="table blog-posts">
                             {% for post in site.tags[tag] %}
                                 <tr class="post-teaser">
-                                    <td class="post-title"><a href="{{ post.url | prepend: site.url }}"><abbr title="{{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min read - {{ post.content | number_of_words }} words">{{ post.title }}</abbr></a></td>
+                                    <td class="post-title"><a href="{{ post.url | prepend: site.baseurl }}"><abbr title="{{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min read - {{ post.content | number_of_words }} words">{{ post.title }}</abbr></a></td>
                                     <td class="blog-teaser-post-date">{{ post.date | date: "%d %b %Y" }}</td>
                                 </tr>
                             {% endfor %}
