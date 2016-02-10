@@ -13,3 +13,34 @@ $('.read-more').click(function() {
         $(this).find($('span')).text().trim();
     }
 });
+
+//sidebar scroll boundaries
+var list = $("#category-list");
+var listTop = $('#category-list').offset().top - 100;
+
+  
+$(window).scroll(function() {    
+    if (($(window).height() - 100) > $('#category-list').height())
+    {
+        var windowTop = $(window).scrollTop();    
+        var archiveTop = $('#blog-archive').offset().top + 50;
+        var archiveBottom = $('#blog-archive').offset().top + $('#blog-archive').height();
+        var listBottom = listTop + $('#category-list').height(); 
+
+        if (windowTop >= archiveTop)                    // Within Archive
+        {
+            list.removeClass("category-fix-release");
+            list.addClass("category-list-fix");
+        }
+        else if (listBottom >= archiveBottom)           // Below Archive
+        {
+            list.removeClass("category-list-fix");
+            list.addClass("category-fix-release");
+        }
+        else                                            // Above Archive
+        { 
+            list.removeClass("category-fix-release");
+            list.removeClass("category-list-fix");
+        }
+    }
+});
