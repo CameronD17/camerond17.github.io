@@ -70,6 +70,10 @@ a:focus {
     text-decoration: none;  
 }
 
+tbody {
+    border-top: none !important;
+}
+
 .emphasis {
     text-align: center;
     font-weight: bold;
@@ -533,6 +537,9 @@ a:focus {
     padding: 0 10px;
 }
 
+.archive-excerpt.hidden {
+    display: none;
+}
 
 @media(min-width:1200px){    
     .archive-title {
@@ -545,14 +552,14 @@ a:focus {
     display: none;
 }
 
-.archive-category {
-    text-align: right;
-}
+.archive-toggle {
+    font-weight: bold;
+}   
 
 @media(min-width:1200px){ 
     #category-list {
         width: 200px;
-        text-align: right;
+        text-align: left;
         display: block;
     }
 }

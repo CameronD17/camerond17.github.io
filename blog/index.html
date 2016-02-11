@@ -60,36 +60,48 @@ title:      Archive
     <section id="blog-archive" class="content-section inverted text-center">
         <div class="container">
             <div class="col-lg-10 col-lg-offset-1">
-                <h1>Blog Archive</h1>                
+                <h1>Blog Archive</h1>
                 <div class="col-lg-9 archive-divider-left">
                     <table class="table blog-posts">
                         {% for post in site.posts %}
-                            <tr class="blog-teaser">
-                                <td class="blog-teaser-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
-                                <td rowspan="2" class="blog-teaser-post-date">{{ post.date | date: "%d %B %Y" }}<span class="blog-teaser-tag"><br \>
-                                {% for tag in post.tags %}
-                                    <a href="{{ site.baseurl }}/blog/#{{tag}}">{{tag}}</a>{% unless post.tags.size == 1 %}{% if forloop.rindex0 == 1 %} &{% elsif forloop.last == false %}, {% endif %}{% endunless %}
-                                {% endfor %}</span><span class="blog-teaser-wordcount"><br \>
-                                <abbr title="{{ post.content | number_of_words }} words">{{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min read</abbr></span>
-                                </td>                            
-                            </tr>
-                            <tr>
-                                <td class="blog-teaser-excerpt">{{ post.excerpt | strip_html }} <a href="{{ post.url | prepend: site.baseurl }}"><span class="blog-teaser-tag">Read more</span></a></td>
-                            </tr>
-                            {% if forloop.last == false %}
-                            <tr>
-                                <td colspan="2"><div class="post-divider"></div></td>
-                            </tr>
-                            {% endif %}
+                            <tbody class="archive-excerpt">
+                                <tr class="blog-teaser">
+                                    <td class="blog-teaser-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
+                                    <td rowspan="2" class="blog-teaser-post-date">
+                                        {{ post.date | date: "%d %B %Y" }}<br \>
+                                        <span class="blog-teaser-tag">
+                                        {% for tag in post.tags %}
+                                            <a href="{{ site.baseurl }}/blog/#{{tag}}" class="{{tag}}">{{tag}}</a>{% unless post.tags.size == 1 %}{% if forloop.rindex0 == 1 %} &{% elsif forloop.last == false %}, {% endif %}{% endunless %}
+                                        {% endfor %}
+                                        </span><br \>
+                                        <span class="blog-teaser-wordcount">
+                                            <abbr title="{{ post.content | number_of_words }} words">{{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min read</abbr>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="blog-teaser-excerpt">{{ post.excerpt | strip_html }} <a href="{{ post.url | prepend: site.baseurl }}"><span class="blog-teaser-tag">Read more</span></a></td>
+                                </tr>
+                                {% if forloop.last == false %}
+                                <tr>
+                                    <td colspan="2"><div class="post-divider"></div></td>
+                                </tr>
+                                {% endif %}
+                            </tbody>
                         {% endfor %}
                     </table>
                 </div>                
                 <div class="col-lg-3">
                     <div id="category-list">
-                        <h2>Categories</h2> 
+                        <h2>Categories</h2>
+                        <ul class="list-inline">                        
+                            <li><a class="archive-toggle selectall"><i class="fa fa-plus-square fa-fw"></i> Select All</a></li>
+                            <li><a class="archive-toggle clearall"><i class="fa fa-minus-square fa-fw"></i> Clear All</a></li>
+                        </ul>
+                        <div class="post-divider"></div>
                         <ul class="list-inline">
                         {% for tag in sortedtags %}
-                            <li class="archive-category"><a class="selected" id="{{ tag }}-link">{{ tag }} ({{ site.tags[tag] | size}}) <i class="fa fa-check-square-o fa-fw"></i></a></li>
+                            <li><a class="archive-category selected" id="{{ tag }}"><i class="fa fa-check-square fa-fw"></i> {{ tag }} ({{ site.tags[tag] | size}})</a></li>
                         {% endfor %}
                         </ul>         
                     </div>
