@@ -426,6 +426,24 @@ tbody {
 
 /* Blog */
 
+.archive-section {
+    display: table;
+}
+
+.archive-left-side {
+    float: none;
+    display: table-cell;
+    position: relative;
+}
+
+.archive-right-side {
+    float: none;
+    display: table-cell;
+    position: relative;
+    text-align: left;
+    min-height: 100%;
+}
+
 .blog-posts {
     list-style-type: none;
     padding: 0px;
@@ -548,29 +566,34 @@ tbody {
     } 
 }
 
+#no-blog-posts {
+    display: table-cell;
+}
+
+#no-blog-posts.hidden {
+    display: none;
+}
+
 #category-list {
     display: none;
+}
+
+@media(min-width:1200px) {
+    #category-list {
+        display: block;
+    }
 }
 
 .archive-toggle {
     font-weight: bold;
 }   
 
-@media(min-width:1200px){ 
-    #category-list {
-        width: 200px;
-        text-align: left;
-        display: block;
-    }
-}
-
-.category-list-fix {
-    position: fixed;
+.category-list-fixed {
+    position: fixed !important;
     top: 100px;
-    width: 100%
 }
 
-.category-fix-release {
+.category-list-bottom {
     position: absolute; 
     bottom: 0px;
 }

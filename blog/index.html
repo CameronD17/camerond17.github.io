@@ -58,10 +58,24 @@ title:      Archive
 
     <!-- Archive Section -->
     <section id="blog-archive" class="content-section inverted text-center">
-        <div class="container">
-            <div class="col-lg-10 col-lg-offset-1">
+        <div class="row archive-section">
+            <div class="col-lg-10 col-lg-offset-1">                
+                <div class="col-lg-9 archive-left-side">
                 <h1>Blog Archive</h1>
-                <div class="col-lg-9 archive-divider-left">
+                <div class="post-divider"></div>
+                    <table id="no-blog-posts" class="table blog-posts hidden">
+                        <tbody>
+                            <tr class="blog-teaser">
+                                <td class="blog-teaser-title">No Posts Found</td>
+                            </tr>
+                            <tr>
+                                <td class="blog-teaser-excerpt">Please use the category filters on the right to select a category of posts to view, or click "Select All" to display the full archive of posts.</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><div class="post-divider"></div></td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <table class="table blog-posts">
                         {% for post in site.posts %}
                             <tbody class="archive-excerpt">
@@ -82,30 +96,28 @@ title:      Archive
                                 <tr>
                                     <td class="blog-teaser-excerpt">{{ post.excerpt | strip_html }} <a href="{{ post.url | prepend: site.baseurl }}"><span class="blog-teaser-tag">Read more</span></a></td>
                                 </tr>
-                                {% if forloop.last == false %}
                                 <tr>
                                     <td colspan="2"><div class="post-divider"></div></td>
                                 </tr>
-                                {% endif %}
                             </tbody>
                         {% endfor %}
                     </table>
-                </div>                
-                <div class="col-lg-3">
+                </div>
+                <div class="col-lg-3 archive-right-side">
                     <div id="category-list">
                         <h2>Categories</h2>
-                        <ul class="list-inline">                        
+                        <ul class="list-inline">
                             <li><a class="archive-toggle selectall"><i class="fa fa-plus-square fa-fw"></i> Select All</a></li>
                             <li><a class="archive-toggle clearall"><i class="fa fa-minus-square fa-fw"></i> Clear All</a></li>
                         </ul>
                         <div class="post-divider"></div>
-                        <ul class="list-inline">
+                        <ul class="list-unstyled">
                         {% for tag in sortedtags %}
                             <li><a class="archive-category selected" id="{{ tag }}"><i class="fa fa-check-square fa-fw"></i> {{ tag }} ({{ site.tags[tag] | size}})</a></li>
                         {% endfor %}
-                        </ul>         
+                        </ul>
                     </div>
-                </div>                
+                </div>
                 
                 
                 <!--
