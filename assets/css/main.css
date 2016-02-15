@@ -577,6 +577,7 @@ tbody {
 
 #category-list {
     display: none;
+    width: 240px;
 }
 
 @media(min-width:1200px) {
