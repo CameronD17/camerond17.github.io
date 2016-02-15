@@ -33,7 +33,6 @@ $(window).scroll(function() {
     }
 });
 
-
 // Toggle blog categories on/off (C) Cameron Doyle
 $('.archive-category').click(function() {    
     if ($(this).hasClass('selected')) {
@@ -115,3 +114,54 @@ $('.archive-toggle').click(function() {
         }
     }
 });
+
+
+function filterCategory() {
+    if(window.location.hash) {        
+        var category = window.location.hash;
+        $("#category-list").removeClass("category-list-bottom");
+        $("#category-list").removeClass("category-list-fixed");
+        $('.archive-category').each(function() {
+            if ($(this).hasClass('selected')) {
+                $(this).removeClass('selected');
+                $(this).find($(".fa")).removeClass('fa-check-square').addClass('fa-square');
+            }
+        });
+        
+        if (!$(category).hasClass('selected')) {
+            $(category).addClass('selected');            
+            $(category).find($(".fa")).removeClass('fa-square').addClass('fa-check-square');
+        }      
+        
+        $('.archive-excerpt').each(function() {
+            if (!$(this).hasClass('hidden')) {
+                $(this).addClass('hidden');
+            }
+        });
+        
+        var none = true;
+        $('.archive-category').each(function() {
+            var category = $(this).attr('id');
+            if ($(this).hasClass('selected')) {
+                $('.archive-excerpt').each(function() {            
+                    if ($(this).find('tr>td>span>a').hasClass(category)) {
+                        if ($(this).hasClass('hidden')) {
+                            $(this).removeClass('hidden');
+                            none = false;
+                        }
+                    }
+                });
+            }
+        });
+        
+        if (none) {
+            $("#category-list").removeClass("category-list-bottom");
+            $("#category-list").removeClass("category-list-fixed");
+            if($("#no-blog-posts").hasClass("hidden")) {
+                $("#no-blog-posts").removeClass("hidden");
+            }
+        } else if(!$("#no-blog-posts").hasClass("hidden")) {
+            $("#no-blog-posts").addClass("hidden");  
+        }
+    }
+} window.onload = filterCategory();
