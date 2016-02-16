@@ -582,7 +582,7 @@ tbody {
         float: none;
         display: table-cell;
         position: relative;
-        width: 800px;
+        width: 75%;
     }
     
     .archive-right-side {
