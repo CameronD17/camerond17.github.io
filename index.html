@@ -3,6 +3,9 @@ layout: home
 custom_js: home
 ---
 
+{% capture dob %}{{ site.author.dateofbirth | date: "%s" }}{% endcapture %}
+{% capture now %}{{'now' | date: "%s"}}{% endcapture %}
+
 <div class="home">
     <!-- About Section -->
     <section id="about" class="content-section">
@@ -24,7 +27,7 @@ custom_js: home
                         <tr>
                             <td class="about-icons about-subtitle"><i class="fa fa-birthday-cake fa-fw"></i></td>
                             <td class="about-subtitle">Age</td>
-                            <td class="about-info">24 years</td>
+                            <td class="about-info">{{ now | minus: dob | divided_by: 31557600}} years</td>
                         </tr>
                         <tr>
                             <td class="about-icons about-subtitle"><i class="fa fa-desktop fa-fw"></i></td>
