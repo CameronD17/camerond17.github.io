@@ -36,16 +36,8 @@ $(window).scroll(function() {
     }
 });
 
-// Toggle blog categories on/off (C) Cameron Doyle
-$('.archive-category').click(function() {    
-    if ($(this).hasClass('selected')) {
-        $(this).removeClass('selected');
-        $(this).find($(".fa")).removeClass('fa-check-square').addClass('fa-square');
-    } else {
-        $(this).addClass('selected');            
-        $(this).find($(".fa")).removeClass('fa-square').addClass('fa-check-square');
-    }    
-    
+function applyToggles() {
+    // Hide all blog posts in the archive
     $('.archive-excerpt').each(function() {
         if (!$(this).hasClass('hidden')) {
             $(this).addClass('hidden');
@@ -53,11 +45,13 @@ $('.archive-category').click(function() {
     });
     
     var none = true;
+    
+    // Loop through the blog posts, and un-hide any blog posts that match any selected categories
     $('.archive-category').each(function() {
         var category = $(this).attr('id');
         if ($(this).hasClass('selected')) {
-            $('.archive-excerpt').each(function() {            
-                if ($(this).find('tr>td>span>a').hasClass(category)) {
+            $('.archive-excerpt').each(function() {
+                if ($(this).find('tr>td>span>a').hasClass('#'+category)) {
                     if ($(this).hasClass('hidden')) {
                         $(this).removeClass('hidden');
                         none = false;
@@ -67,6 +61,7 @@ $('.archive-category').click(function() {
         }
     });
     
+    // If no blog posts match the selected categories, show the "No Posts Found" default post
     if (none) {
         $("#category-list").removeClass("category-list-bottom");
         $("#category-list").removeClass("category-list-fixed");
@@ -76,10 +71,41 @@ $('.archive-category').click(function() {
     } else if(!$("#no-blog-posts").hasClass("hidden")) {
         $("#no-blog-posts").addClass("hidden");  
     }
-});
+}
 
-$('.archive-toggle').click(function() {
-    if ($(this).hasClass('selectall')) {
+function toggleCategory(categoryFilter) {
+    // Change the tick-box state in the Category List
+    if (categoryFilter.hasClass('selected')) {
+        categoryFilter.removeClass('selected');
+        categoryFilter.find($(".fa")).removeClass('fa-check-square').addClass('fa-square');
+    } else {
+        categoryFilter.addClass('selected');
+        categoryFilter.find($(".fa")).removeClass('fa-square').addClass('fa-check-square');
+    }    
+    
+    applyToggles();
+}
+
+function deselectAndToggleCategory(category) {
+    $("#category-list").removeClass("category-list-bottom");
+    $("#category-list").removeClass("category-list-fixed");
+    $('.archive-category').each(function() {
+        if ($(this).hasClass('selected')) {
+            $(this).removeClass('selected');
+            $(this).find($(".fa")).removeClass('fa-check-square').addClass('fa-square');
+        }
+    });
+    
+    if (!$(category).hasClass('selected')) {
+        $(category).addClass('selected');
+        $(category).find($(".fa")).removeClass('fa-square').addClass('fa-check-square');
+    }      
+    
+    applyToggles();
+}
+
+function toggleAllCategories(toggleAll) {
+    if (toggleAll.hasClass('selectall')) {
         $('.archive-category').each(function() {
             if (!$(this).hasClass('selected')) {
                 $(this).addClass('selected');
@@ -116,55 +142,24 @@ $('.archive-toggle').click(function() {
             $("#no-blog-posts").removeClass("hidden");
         }
     }
+}
+
+// Toggle blog categories on/off (C) Cameron Doyle
+$('.archive-category').click(function() {    
+    toggleCategory($(this));
 });
 
+$('.archive-toggle').click(function() {
+    toggleAllCategories($(this));
+});
 
-function filterCategory() {
+function archiveFilterFromHash() {
     if(window.location.hash) {        
-        var category = window.location.hash;
-        $("#category-list").removeClass("category-list-bottom");
-        $("#category-list").removeClass("category-list-fixed");
-        $('.archive-category').each(function() {
-            if ($(this).hasClass('selected')) {
-                $(this).removeClass('selected');
-                $(this).find($(".fa")).removeClass('fa-check-square').addClass('fa-square');
-            }
-        });
-        
-        if (!$(category).hasClass('selected')) {
-            $(category).addClass('selected');            
-            $(category).find($(".fa")).removeClass('fa-square').addClass('fa-check-square');
-        }      
-        
-        $('.archive-excerpt').each(function() {
-            if (!$(this).hasClass('hidden')) {
-                $(this).addClass('hidden');
-            }
-        });
-        
-        var none = true;
-        $('.archive-category').each(function() {
-            var category = $(this).attr('id');
-            if ($(this).hasClass('selected')) {
-                $('.archive-excerpt').each(function() {            
-                    if ($(this).find('tr>td>span>a').hasClass(category)) {
-                        if ($(this).hasClass('hidden')) {
-                            $(this).removeClass('hidden');
-                            none = false;
-                        }
-                    }
-                });
-            }
-        });
-        
-        if (none) {
-            $("#category-list").removeClass("category-list-bottom");
-            $("#category-list").removeClass("category-list-fixed");
-            if($("#no-blog-posts").hasClass("hidden")) {
-                $("#no-blog-posts").removeClass("hidden");
-            }
-        } else if(!$("#no-blog-posts").hasClass("hidden")) {
-            $("#no-blog-posts").addClass("hidden");  
-        }
+        deselectAndToggleCategory(window.location.hash);
     }
-} window.onload = filterCategory();
+} window.onload = archiveFilterFromHash();
+
+$('.archive-filter').click(function() {
+    var category = $(this).attr('class').split(' ')[1];
+    deselectAndToggleCategory(category);    
+});
