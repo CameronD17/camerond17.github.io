@@ -300,22 +300,17 @@ custom_js: home
                         <form action="http://formspree.io/{{ site.author.email }}" method="POST">
                             <div class="form-group">
                                 <div class="col-sm-12">
-                                    <input class="form-control" id="contactFormFromName" type="text" name="name" placeholder="Your Name" />
+                                    <input class="form-control" type="text" name="name" placeholder="Your Name" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-12">
-                                    <input class="form-control" id="contactFormFromEmail" type="email" name="_replyto" placeholder="Your Email Address" />
+                                    <input class="form-control" type="email" name="_replyto" placeholder="Your Email Address" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-12">
-                                    <input class="form-control" type="text" id="contactFormSubject" name="_subject" placeholder="Subject" />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-12">
-                                    <textarea class="form-control" id="contactFormBody" rows="5" name="body" placeholder="Message"></textarea>
+                                    <textarea class="form-control" rows="5" name="body" placeholder="Message"></textarea>
                                 </div>
                             </div>
                             <div>
@@ -323,6 +318,7 @@ custom_js: home
                                     <button type="submit" class="btn btn-default"><i class="fa fa-paper-plane fa-fw"></i> Send Message</button>
                                 </div>
                             </div>
+                            <input type="hidden" name="_subject" value="Website Contact Form" />
                             <input type="hidden" name="_next" value="{{ site.url }}" />
                         </form>
                     </div>
