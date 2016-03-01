@@ -2,6 +2,7 @@
 title: Cameron Doyle
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://camerondoyle.co.uk/"
+blogurl: "http://blog.camerondoyle.co.uk/"
 permalink: blog/:title/
 excerpt_separator: <!-- Read More -->
 
