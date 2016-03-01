@@ -289,32 +289,44 @@ custom_js: home
     </section>
 
     <!-- Blog Section -->
-    <section id="blog-excerpt" class="content-section text-center inverted">
+    <section id="contact" class="content-section text-center inverted">
         <div class="container">
             <div class="col-lg-10 col-lg-offset-1">
-                <h1>Blog</h1>                
-                <table class="table blog-posts">
-                    {% for post in site.posts limit:3 %}
-                        <tr class="blog-teaser">
-                            <td class="blog-teaser-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
-                            <td rowspan="2" class="blog-teaser-post-date">{{ post.date | date: "%d %B %Y" }}<span class="blog-teaser-tag"><br \>
-                            {% for tag in post.tags %}
-                                <a href="{{ site.baseurl }}/blog/#{{tag}}">{{tag}}</a>{% unless post.tags.size == 1 %}{% if forloop.rindex0 == 1 %} &{% elsif forloop.last == false %}, {% endif %}{% endunless %}
-                            {% endfor %}</span><span class="blog-teaser-wordcount"><br \>
-                            <abbr title="{{ post.content | number_of_words }} words">{{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min read</abbr></span>
-                            </td>                            
-                        </tr>
-                        <tr>
-                            <td class="blog-teaser-excerpt">{{ post.excerpt | strip_html }} <a href="{{ post.url | prepend: site.baseurl }}"><span class="blog-teaser-tag">Read more</span></a></td>
-                        </tr>
-                        {% if forloop.last == false %}
-                        <tr>
-                            <td colspan="2"><div class="post-divider"></div></td>
-                        </tr>
-                        {% endif %}
-                    {% endfor %}
-                </table> 
-                <h2 class="blog-teaser-archive"><a href="/blog/">Archive</a></h2>                
+                <h1>Contact</h1>
+                    <p class="contact-text">You can contact me on <a href="https://uk.linkedin.com/in/{{ site.author.linkedin }}" target="_blank" title="LinkedIn">LinkedIn <i class="fa fa-linkedin fa-fw"></i></a>, <a href="https://facebook.com/{{ site.author.facebook }}" target="_blank">Facebook <i class="fa fa-facebook-official fa-fw"></i></a>, or <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank">Twitter <i class="fa fa-twitter fa-fw"></i></a>.</p>
+                    <p class="contact-text">Alternatively, you can drop me an email at <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a> using the form below.</p>
+                
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <form action="http://formspree.io/{{ site.author.email }}" method="POST">
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <input class="form-control" id="contactFormFromName" type="text" name="name" placeholder="Your Name" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <input class="form-control" id="contactFormFromEmail" type="email" name="_replyto" placeholder="Your Email Address" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <input class="form-control" type="text" id="contactFormSubject" name="_subject" placeholder="Subject" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <textarea class="form-control" id="contactFormBody" rows="5" name="body" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="col-sm-12">
+                                    <button type="submit" class="btn btn-default"><i class="fa fa-paper-plane fa-fw"></i> Send Message</button>
+                                </div>
+                            </div>
+                            <input type="hidden" name="_next" value="{{ site.url }}" />
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

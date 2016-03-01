@@ -18,8 +18,8 @@ author:
     instagram: camerond17
     stackoverflow: 1669993/camerond17
     
-description: > # this means to ignore newlines until "url:"
+description: > 
   Personal portfolio website of Cameron Doyle, a programmer 
   and software engineer based in Edinburgh, Scotland.
-# Build settings
+  
 markdown: kramdown
