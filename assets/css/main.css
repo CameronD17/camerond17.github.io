@@ -267,7 +267,7 @@ tbody {
 @media(min-width:768px) {
     .intro {
         height: 100%;
-        padding: 0;        
+        padding: 0;
         background: url(../img/intro.jpg) no-repeat bottom center scroll;
         background-color: #004870;
         -webkit-background-size: cover;
