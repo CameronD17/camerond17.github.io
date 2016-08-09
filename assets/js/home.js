@@ -18,9 +18,15 @@ function loadImages() {
         blythImg.className="img-circle";
         blyth.appendChild(blythImg);
         
-        var code = document.getElementById("abt-code-img");        
+        var code = document.getElementById("abt-code-img");
         var codeImg=document.createElement("img");
         codeImg.src="assets/img/abt_code.jpg"
+        codeImg.className="img-circle";
+        code.appendChild(codeImg);
+        
+        var code = document.getElementById("abt-football-img");
+        var codeImg=document.createElement("img");
+        codeImg.src="assets/img/abt_football.jpg"
         codeImg.className="img-circle";
         code.appendChild(codeImg);
         
