@@ -36,6 +36,12 @@ function loadImages() {
         travelImg.className="img-circle";
         travel.appendChild(travelImg);
         
+        var avaloq = document.getElementById("exp-avaloq-img");
+        var avaloqImg=document.createElement("img");
+        avaloqImg.src="assets/img/exp_avaloq.png"
+        avaloqImg.className="img-circle";
+        avaloq.appendChild(avaloqImg);
+        
         var cgi = document.getElementById("exp-cgi-img");
         var cgiImg=document.createElement("img");
         cgiImg.src="assets/img/exp_cgi.jpg"
