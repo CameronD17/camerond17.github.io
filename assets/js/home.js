@@ -24,11 +24,11 @@ function loadImages() {
         codeImg.className="img-circle";
         code.appendChild(codeImg);
         
-        var code = document.getElementById("abt-football-img");
-        var codeImg=document.createElement("img");
-        codeImg.src="assets/img/abt_football.jpg"
-        codeImg.className="img-circle";
-        code.appendChild(codeImg);
+        var canicross = document.getElementById("abt-canicross-img");
+        var canicrossImg=document.createElement("img");
+        canicrossImg.src="assets/img/abt_canicross.jpg"
+        canicrossImg.className="img-circle";
+        canicross.appendChild(canicrossImg);
         
         var travel = document.getElementById("abt-travel-img");
         var travelImg=document.createElement("img");
