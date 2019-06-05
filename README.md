@@ -1,4 +1,4 @@
-# [CameronDoyle.co.uk] (http://camerondoyle.co.uk)
+# [CameronDoyle.co.uk](https://camerondoyle.co.uk)
 
 camerondoyle.co.uk is a single-page portfolio website for, unsurpisingly, **Cameron Doyle** (that's me). It also houses my personal blog, which is updated as and when I remember.
 
