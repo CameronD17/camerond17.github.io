@@ -42,6 +42,12 @@ function loadImages() {
         avaloqImg.className="img-circle";
         avaloq.appendChild(avaloqImg);
         
+        var fanduel = document.getElementById("exp-fanduel-img");
+        var fanduelImg=document.createElement("img");
+        fanduelImg.src="assets/img/exp_fanduel.jpg"
+        fanduelImg.className="img-circle";
+        fanduel.appendChild(fanduelImg);
+        
         var cgi = document.getElementById("exp-cgi-img");
         var cgiImg=document.createElement("img");
         cgiImg.src="assets/img/exp_cgi.jpg"
