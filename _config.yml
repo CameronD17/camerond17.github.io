@@ -1,10 +1,8 @@
 # Site settings
 title: Cameron Doyle
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: ""
 url: "https://camerondoyle.co.uk/"
 blogurl: "https://blog.camerondoyle.co.uk/"
-permalink: blog/:title/
-excerpt_separator: <!-- Read More -->
 
 author:
     firstname: Cameron
@@ -12,12 +10,10 @@ author:
     fullname: Cameron Doyle
     dateofbirth: 1992-02-17 00:00:00 +0000
     email: hello@camerondoyle.co.uk
-    twitter: CameronD17
     github: CameronD17
     facebook: cameron.doyle
     linkedin: camerond17
-    instagram: camerond17
-    stackoverflow: 1669993/camerond17
+    instagram: charlie.border.collie
     
 description: > 
   Personal portfolio website of Cameron Doyle, a programmer 
